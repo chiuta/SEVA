@@ -447,7 +447,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <div style="padding:0 18px;">
     <div class="searchbox" id="globalSearchBox" style="margin:0;">
       <span class="ico">⌕</span>
-      <input type="text" id="globalSearchInput" placeholder="Caută în tot ghidul…" autocomplete="off">
+      <input type="text" id="globalSearchInput" aria-label="Caută în tot ghidul" placeholder="Caută în tot ghidul…" autocomplete="off">
     </div>
     <div id="globalSearchResults" style="display:none;margin-top:4px;background:var(--panel-2);border:1px solid var(--line);border-radius:var(--radius);max-height:240px;overflow-y:auto;"></div>
   </div>
@@ -1207,7 +1207,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <p style="font-size:13.5px;color:var(--ink-dim);">O tehnică de ancorare senzorială, utilă în momente de anxietate acută — mută atenția din gânduri, spre simțuri, spre <i>aici</i>.</p>
   <div class="panel">
     <div class="quiz-q" id="groundStepLabel" style="font-family:var(--font-body);">Apasă „Începe” când ești gata.</div>
-    <input type="text" id="groundInput" placeholder="notează, opțional, ce observi…" style="display:none;">
+    <input type="text" id="groundInput" aria-label="Ce observi (opțional)" placeholder="notează, opțional, ce observi…" style="display:none;">
     <div class="btnrow">
       <button class="btn primary" id="groundStartBtn" type="button">▶ Începe</button>
       <button class="btn" id="groundNextBtn" type="button" style="display:none;">Următorul →</button>
@@ -1257,7 +1257,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     <label style="margin-top:10px;">Obiceiuri urmărite</label>
     <div id="habitCheckList" style="margin-bottom:8px;"></div>
     <div class="btnrow" style="margin:0 0 12px;">
-      <input type="text" id="habitNewName" placeholder="adaugă un obicei nou (ex: cititul, vitamine)" style="max-width:280px;">
+      <input type="text" id="habitNewName" aria-label="Obicei nou" placeholder="adaugă un obicei nou (ex: cititul, vitamine)" style="max-width:280px;">
       <button class="btn small" id="habitAddBtn" type="button">+ Adaugă obicei</button>
     </div>
 
@@ -1325,17 +1325,17 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
       <div>
         <label>Dimineața</label>
         <div id="routineList-dim" style="margin-bottom:8px;"></div>
-        <div class="btnrow" style="margin:0;"><input type="text" id="routineInput-dim" placeholder="+ adaugă"><button class="btn small" data-add="dim" type="button">+</button></div>
+        <div class="btnrow" style="margin:0;"><input type="text" id="routineInput-dim" aria-label="Adaugă în rutina de dimineață" placeholder="+ adaugă"><button class="btn small" data-add="dim" type="button">+</button></div>
       </div>
       <div>
         <label>Ziua</label>
         <div id="routineList-zi" style="margin-bottom:8px;"></div>
-        <div class="btnrow" style="margin:0;"><input type="text" id="routineInput-zi" placeholder="+ adaugă"><button class="btn small" data-add="zi" type="button">+</button></div>
+        <div class="btnrow" style="margin:0;"><input type="text" id="routineInput-zi" aria-label="Adaugă în rutina de zi" placeholder="+ adaugă"><button class="btn small" data-add="zi" type="button">+</button></div>
       </div>
       <div>
         <label>Seara</label>
         <div id="routineList-seara" style="margin-bottom:8px;"></div>
-        <div class="btnrow" style="margin:0;"><input type="text" id="routineInput-seara" placeholder="+ adaugă"><button class="btn small" data-add="seara" type="button">+</button></div>
+        <div class="btnrow" style="margin:0;"><input type="text" id="routineInput-seara" aria-label="Adaugă în rutina de seară" placeholder="+ adaugă"><button class="btn small" data-add="seara" type="button">+</button></div>
       </div>
     </div>
     <div class="note">Trăiește doar în memorie, ca tot restul — dacă vrei s-o păstrezi, notează-o și în jurnal (§11) sau exportă pachetul complet din §15.</div>
@@ -1583,7 +1583,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
 
   <div class="searchbox">
     <span class="ico">⌕</span>
-    <input type="text" id="glosarSearch" placeholder="Caută un termen… (ex: cortizol, HRV, homeostazie)">
+    <input type="text" id="glosarSearch" aria-label="Caută în glosar" placeholder="Caută un termen… (ex: cortizol, HRV, homeostazie)">
     <span class="count-pill" id="glosarCount"></span>
   </div>
 
@@ -1679,6 +1679,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
 const $  = sel => document.querySelector(sel);
 const $$ = sel => Array.from(document.querySelectorAll(sel));
 const pad2 = n => String(n).padStart(2,'0');
+const esc = s => String(s==null?'':s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const clamp = (v,lo,hi) => Math.max(lo,Math.min(hi,v));
 const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 function fmt1(n){ return (Math.round(n*10)/10).toString(); }
@@ -2000,7 +2001,7 @@ const PACER_PATTERNS = {
   sigh:     [{l:'Inspiră scurt',d:1.2,s:0.6},{l:'Inspiră din nou',d:0.8,s:1},{l:'Expiră lung',d:6,s:0}],
   extended: [{l:'Inspiră',d:4,s:1},{l:'Expiră',d:6,s:0}],
 };
-let pacerTimer=null, pacerRunning=false, pacerStartTime=0, pacerSessions=0;
+let pacerTimer=null, pacerTick=null, pacerRunning=false, pacerStartTime=0, pacerSessions=0;
 function pacerGetPattern(){
   const sel = $('#pacerPattern').value;
   if(sel==='custom'){
@@ -2024,7 +2025,8 @@ function pacerRunPhase(seq, i){
   if($('#pacerVibrate') && $('#pacerVibrate').checked && navigator.vibrate) navigator.vibrate(60);
   let remaining = Math.ceil(phase.d);
   $('#pacerCountLabel').textContent = remaining+' s';
-  const tick = setInterval(()=>{
+  if(pacerTick) clearInterval(pacerTick);
+  const tick = pacerTick = setInterval(()=>{
     remaining--;
     if(remaining>=0) $('#pacerCountLabel').textContent = remaining+' s';
     if(remaining<=0) clearInterval(tick);
@@ -2048,6 +2050,7 @@ function pacerStart(){
 function pacerStop(completed){
   pacerRunning = false;
   if(pacerTimer) clearTimeout(pacerTimer);
+  if(pacerTick){ clearInterval(pacerTick); pacerTick=null; }
   releaseWakeLock();
   $('#pacerOrb').style.transitionDuration = '1s';
   $('#pacerOrb').style.transform = 'scale(0.55)';
@@ -2162,7 +2165,7 @@ function ivTick(){
   ivState.timer = setTimeout(ivTick,1000);
 }
 function ivAdvance(){
-  const work=parseInt($('#ivWork').value,10)||20, rest=parseInt($('#ivRest').value,10)||10, rounds=parseInt($('#ivRounds').value,10)||8;
+  const work=parseInt($('#ivWork').value,10)||20, restRaw=parseInt($('#ivRest').value,10), rest=isNaN(restRaw)?10:Math.max(0,restRaw), rounds=parseInt($('#ivRounds').value,10)||8;
   if(ivState.phase==='prep'){
     ivState.phase='work'; ivState.round=1; ivState.remaining=work;
     $('#ivPhaseLabel').textContent='LUCRU'; $('#ivRoundLabel').textContent='Runda 1 / '+rounds;
@@ -2209,6 +2212,7 @@ function initIntervalTimer(){
   $('#ivStartBtn').addEventListener('click', ivStart);
   $('#ivPauseBtn').addEventListener('click', ()=>{
     ivState.paused = !ivState.paused;
+    if(ivState.timer){ clearTimeout(ivState.timer); ivState.timer=null; }
     $('#ivPauseBtn').textContent = ivState.paused? '▶ Continuă':'⏸ Pauză';
     if(!ivState.paused && ivState.running){ ivState.timer=setTimeout(ivTick,1000); }
   });
@@ -2235,6 +2239,7 @@ function stretchRun(){
 }
 function initStretch(){
   $('#stretchStartBtn').addEventListener('click', ()=>{
+    if(stretchTimerHandle) clearInterval(stretchTimerHandle);
     stretchListEls = $$('#stretchList .qitem');
     stretchIdx = 0;
     requestWakeLock();
@@ -2533,7 +2538,10 @@ function initJournalIO(){
         let added=0;
         if(Array.isArray(data.seva_jurnal)){
           data.seva_jurnal.forEach(entry=>{
-            if(entry && entry.date){
+            if(entry && typeof entry.date==='string' && entry.date){
+              entry.mood = (entry.mood>=1 && entry.mood<=5) ? Math.round(entry.mood) : null;
+              if(!Array.isArray(entry.habits)) entry.habits = [];
+              entry.habits = entry.habits.filter(x=>typeof x==='string');
               const idx = journalEntries.findIndex(x=>x.date===entry.date);
               if(idx>=0) journalEntries[idx]=entry; else journalEntries.push(entry);
               added++;
@@ -2541,10 +2549,10 @@ function initJournalIO(){
           });
         }
         if(Array.isArray(data.seva_obiceiuri)){
-          data.seva_obiceiuri.forEach(h=>{ if(typeof h==='string' && !habitDefs.includes(h)) habitDefs.push(h); });
+          data.seva_obiceiuri.forEach(h=>{ if(typeof h==='string' && h && !habitDefs.includes(h)) habitDefs.push(h); });
         }
         if(Array.isArray(data.seva_bolt)){
-          data.seva_bolt.forEach(b=>{ if(b && b.date && typeof b.seconds==='number') boltHistory.push(b); });
+          data.seva_bolt.forEach(b=>{ if(b && typeof b.date==='string' && typeof b.seconds==='number' && isFinite(b.seconds)) boltHistory.push({date:b.date, seconds:b.seconds}); });
           if(typeof renderBoltHistory==='function') renderBoltHistory();
         }
         journalEntries.sort((a,b)=> a.date<b.date?1:-1);
@@ -2602,7 +2610,7 @@ function initConverters(){
   cm.addEventListener('input', ()=>{
     if(cm.value===''){ ftin.value=''; return; }
     const totalIn = parseFloat(cm.value)/2.54;
-    const ft = Math.floor(totalIn/12), inch = Math.round(totalIn%12);
+    const roundedIn = Math.round(totalIn), ft = Math.floor(roundedIn/12), inch = roundedIn%12;
     ftin.value = ft+"'"+inch+'"';
   });
 
@@ -2684,7 +2692,7 @@ function initChallenges(){
   });
   $('#challengeStartBtn').addEventListener('click', ()=>{
     const name = $('#challengeCustomName').value.trim();
-    const days = parseInt($('#challengeCustomDays').value,10)||21;
+    const days = clamp(parseInt($('#challengeCustomDays').value,10)||21, 3, 90);
     if(!name) return;
     activeChallenge = {name, duration:days, start:todayISO(), days:new Array(days).fill(false)};
     renderChallengeTracker();
@@ -2767,7 +2775,7 @@ function quizRenderQuestion(){
   }
   const q = quizQueue[quizIdx];
   let html = '<div class="quiz-card"><div class="quiz-q">'+q.q+'</div>';
-  q.opts.forEach((opt,i)=>{ html += '<button class="quiz-opt" data-i="'+i+'" type="button">'+opt+'</button>'; });
+  shuffleArr(q.opts.map((o,i)=>i)).forEach(i=>{ html += '<button class="quiz-opt" data-i="'+i+'" type="button">'+q.opts[i]+'</button>'; });
   html += '<div class="quiz-explain" id="quizExplain">'+q.exp+'</div>';
   html += '<div class="btnrow"><button class="btn" id="quizNextBtn" type="button" style="display:none;">Următoarea →</button></div></div>';
   area.innerHTML = html;
@@ -2791,7 +2799,8 @@ function srsUpdate(idx, correct){
   s.due = d.getFullYear()+'-'+pad2(d.getMonth()+1)+'-'+pad2(d.getDate());
 }
 function quizAnswer(q, i){
-  $$('#quizArea .quiz-opt').forEach((btn,bi)=>{
+  $$('#quizArea .quiz-opt').forEach(btn=>{
+    const bi = parseInt(btn.dataset.i,10);
     btn.disabled=true;
     if(bi===q.correct) btn.classList.add('correct');
     else if(bi===i) btn.classList.add('wrong');
@@ -2828,7 +2837,7 @@ function initQuiz(){
     if(e.target.files && e.target.files[0]){
       readJSONFile(e.target.files[0], (err,data)=>{
         if(err || !data || !data.seva_srs){ $('#srsStatus').textContent='Fișier invalid.'; return; }
-        Object.assign(srsState, data.seva_srs);
+        Object.keys(data.seva_srs).forEach(k=>{ const s=data.seva_srs[k]; if(/^\d+$/.test(k) && s && typeof s.due==='string' && typeof s.interval==='number' && typeof s.ease==='number' && typeof s.reps==='number') srsState[k]=s; });
         $('#srsStatus').textContent='Progres importat.';
       });
       e.target.value='';
@@ -3488,7 +3497,7 @@ function renderDashboard(){
       const done = journalEntries.filter(e=> e.habits && e.habits.includes(h)).length;
       const pct = total? Math.round(done/total*100) : 0;
       const div = document.createElement('div'); div.style.margin='10px 0';
-      div.innerHTML = '<div style="display:flex;justify-content:space-between;font-size:13px;color:var(--ink-dim);"><span>'+h+'</span><span style="font-family:var(--font-mono);color:var(--sap);">'+done+' / '+total+'</span></div><div class="progwrap"><div class="progfill" style="width:'+pct+'%;"></div></div>';
+      div.innerHTML = '<div style="display:flex;justify-content:space-between;font-size:13px;color:var(--ink-dim);"><span>'+esc(h)+'</span><span style="font-family:var(--font-mono);color:var(--sap);">'+done+' / '+total+'</span></div><div class="progwrap"><div class="progfill" style="width:'+pct+'%;"></div></div>';
       habitsEl.appendChild(div);
     });
   }
@@ -3500,8 +3509,8 @@ function renderDashboard(){
     const best = withMood.slice().sort((a,b)=>b.mood-a.mood)[0];
     const worst = withMood.slice().sort((a,b)=>a.mood-b.mood)[0];
     extremesEl.innerHTML =
-      '<div class="panel"><div style="font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.05em;">Cea mai bună</div><div style="font-size:24px;margin:4px 0;">'+MOOD_EMOJI[best.mood-1]+' <span style="font-size:14px;">'+best.date+'</span></div>'+(best.gratitude?'<div style="font-size:12.5px;color:var(--ink-dim);">recunoștință: '+best.gratitude+'</div>':'')+'</div>'
-      +'<div class="panel"><div style="font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.05em;">Cea mai grea</div><div style="font-size:24px;margin:4px 0;">'+MOOD_EMOJI[worst.mood-1]+' <span style="font-size:14px;">'+worst.date+'</span></div>'+(worst.note?'<div style="font-size:12.5px;color:var(--ink-dim);">'+worst.note+'</div>':'')+'</div>';
+      '<div class="panel"><div style="font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.05em;">Cea mai bună</div><div style="font-size:24px;margin:4px 0;">'+(MOOD_EMOJI[best.mood-1]||'')+' <span style="font-size:14px;">'+esc(best.date)+'</span></div>'+(best.gratitude?'<div style="font-size:12.5px;color:var(--ink-dim);">recunoștință: '+esc(best.gratitude)+'</div>':'')+'</div>'
+      +'<div class="panel"><div style="font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.05em;">Cea mai grea</div><div style="font-size:24px;margin:4px 0;">'+(MOOD_EMOJI[worst.mood-1]||'')+' <span style="font-size:14px;">'+esc(worst.date)+'</span></div>'+(worst.note?'<div style="font-size:12.5px;color:var(--ink-dim);">'+esc(worst.note)+'</div>':'')+'</div>';
   } else {
     extremesEl.innerHTML = '<div class="note">Adaugă dispoziția la intrările din jurnal ca să vezi asta.</div>';
   }
@@ -3822,7 +3831,7 @@ function renderBoltHistory(){
   if(!boltHistory.length){ wrap.innerHTML=''; return; }
   const recent = boltHistory.slice(-10);
   wrap.innerHTML = '<div style="font-size:11px;color:var(--ink-faint);margin-bottom:4px;">Istoric (se exportă odată cu jurnalul, §11):</div>'
-    + recent.map(h=> '<span class="tag">'+h.date+': '+h.seconds.toFixed(1)+'s</span>').join(' ');
+    + recent.map(h=> '<span class="tag">'+esc(h.date)+': '+h.seconds.toFixed(1)+'s</span>').join(' ');
 }
 function initBoltHistory(){
   $('#boltSaveBtn').addEventListener('click', ()=>{
