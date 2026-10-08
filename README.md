@@ -1,0 +1,56 @@
+# SEVA — Enciclopedia stării de bine
+
+Ghid complet despre starea de bine, într-un singur fișier HTML, fără cont și fără urmărire.
+
+**Live:** https://chiuta.github.io/SEVA/
+
+![Captura de ecran](screenshot.png)
+
+## Ce este
+
+SEVA este o enciclopedie interactivă (în română) despre somn, ritm circadian, respirație, nutriție, mișcare, recuperare, postură, mindfulness, stres, jurnal și obiceiuri, cu unelte practice. Aplicația precizează că nu înlocuiește îngrijirea medicală sau psihologică și că oferă referință și unelte de auto-observare, nu diagnostic sau tratament.
+
+## Funcții
+
+Conținutul este organizat în secțiuni numerotate (meniu lateral, ☰ pe mobil):
+
+- Orientare: Acasă, Istorie & știință.
+- Ritmurile corpului: Ritm circadian (cadran interactiv desenat în SVG), Somnul, Respirația.
+- Corpul: Nutriție & hidratare, Mișcare & antrenament, Recuperare, Postură & ergonomie.
+- Mintea: Mindfulness & meditație, Stres & reglare, Jurnal & obiceiuri.
+- Practică de zi cu zi: O zi echilibrată, Trusa de wellness, Calculatoare & unelte, Provocări & obiective.
+- Resurse: Când ai nevoie de ajutor, Test de cunoștințe (cu certificat de finalizare), Glosar A-Z.
+- Perspectivă: Tablou de bord & tipare.
+- Căutare globală, temă Zi/Noapte, indicator „faza zilei", tipărirea secțiunii curente, „Verifică integritatea fișierului" (SHA-256 al DOM-ului la încărcare), „Din ce e făcut fișierul" și „Raportează o eroare" (link GitHub).
+- Jurnalul, notițele personale, progresul de repetiție spațiată și certificatul se pot exporta/importa ca fișiere JSON.
+
+## Manual de utilizare
+
+1. Navighează din meniul lateral (☰ pe telefon) sau din căutarea globală (⌕).
+2. Comută tema cu „☾ Noapte" / „☀ Zi".
+3. Folosește secțiunile interactive (cadranul circadian, exercițiile de respirație, calculatoarele, testul BOLT etc.) direct în pagină.
+4. În §11 Jurnal & obiceiuri: jurnalul trăiește doar în memorie cât timp pagina e deschisă și dispare la reîncărcare. Apasă „💾 Exportă jurnalul (.json)" pentru a-l salva ca `seva-jurnal.json` și „📂 Importă" pentru a-l reîncărca într-o vizită viitoare (există și „Distribuie fișierul").
+5. Notițele (`seva-notite.json`) și progresul de repetiție spațiată (`seva-repetitie-spatiata.json`) se salvează tot prin „💾 Exportă (.json)" și „💾 Exportă progresul", iar reîncărcarea prin „📂 Importă" / „📂 Importă progresul".
+6. În §17 Test de cunoștințe completează numele pentru certificat și apasă „Generează certificat"; certificatul se descarcă ca `seva-certificat.json`.
+7. „Printează secțiunea curentă" tipărește secțiunea deschisă.
+
+## Confidențialitate și rețea
+
+- Aplicația spune explicit că nu folosește localStorage, sessionStorage sau cookies; în cod nu există apeluri către acestea. Starea există doar în memorie până la reîncărcare, în afară de fișierele pe care le exporți tu.
+- Nu face cereri de rețea (fără `fetch`, CDN sau scripturi externe). Conține doar link-uri, deschise la click: mentalhealthforromania.org, findahelpline.com, antisuicid.ro, who.int, sleepfoundation.org, github.com (raportare erori), trom.tf, Patreon și chiuta.github.io.
+
+## Rulare locală / offline
+
+Descarcă `index.html` și deschide-l în browser; nu necesită internet (link-urile externe se deschid doar la click).
+
+## Licență
+
+Licența nu este încă declarată explicit în acest repository; vezi nota din aplicație. Aplicația se descrie ca „trade-free" și nu citează o licență anume.
+
+## Autor
+
+Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
+
+## English summary
+
+SEVA is a single-file Romanian-language encyclopedia of well-being: circadian rhythm, sleep, breathing, nutrition, movement, recovery, posture, mindfulness, stress, habits, with calculators, a journal, a knowledge quiz with a completion certificate and a glossary. It is not medical advice. It stores nothing in the browser (journal, notes and progress are exported/imported as JSON) and makes no network requests.
