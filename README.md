@@ -54,3 +54,7 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 ## English summary
 
 SEVA is a single-file Romanian-language encyclopedia of well-being: circadian rhythm, sleep, breathing, nutrition, movement, recovery, posture, mindfulness, stress, habits, with calculators, a journal, a knowledge quiz with a completion certificate and a glossary. It is not medical advice. It stores nothing in the browser (journal, notes and progress are exported/imported as JSON) and makes no network requests.
+
+## Audit
+
+Audit: 2026-10-10 — verificat: 0 erori JS, 0 cereri de rețea, 0 utilizări de localStorage/sessionStorage/cookies; axe (WCAG 2.1 AA) rulat pe toate secțiunile, în tema de noapte, de zi și pe mobil, fără încălcări serious/critical după corecturile de contrast. Conținutul de sănătate este informativ și nu a fost validat medical; numărul TelVerde Antisuicid (0800 801 200) și programul lui pot fi modificate de operator.

@@ -32,7 +32,7 @@
   --canopy-2:#e4d6b8;
   --ink:#ddd3bd;
   --ink-dim:#a3957c;
-  --ink-faint:#6b5f4a;
+  --ink-faint:#968b6d;
   --ink-dark:#181209;
   --danger:#c15c4f;
   --radius:6px;
@@ -49,7 +49,7 @@
   --panel-2:#eee2c5;
   --line:#d6c49c;
   --line-soft:#e6d9bb;
-  --sap:#8f6419;
+  --sap:#7a5412;
   --sap-dim:#b78d49;
   --sap-glow:rgba(143,100,25,.16);
   --leaf:#3d6a3e;
@@ -61,7 +61,7 @@
   --canopy-2:#3a2f1a;
   --ink:#2b2313;
   --ink-dim:#63583f;
-  --ink-faint:#8d8161;
+  --ink-faint:#6b6046;
   --ink-dark:#181209;
   --danger:#a1483a;
 }
@@ -248,7 +248,7 @@ tr:hover td{background:var(--panel-2);color:var(--ink);}
   font-family:var(--font-body);
 }
 .btn:hover{border-color:var(--leaf-dim);color:var(--leaf);}
-.btn.primary{background:var(--sap-dim);border-color:var(--sap-dim);color:#1c1408;}
+.btn.primary{background:#b08a45;border-color:#b08a45;color:#1c1408;}
 .btn.primary:hover{background:var(--sap);color:#1c1408;}
 .btn.small{padding:5px 11px;font-size:12px;}
 .btn:disabled{opacity:.4;cursor:not-allowed;}
@@ -641,7 +641,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     </div>
   </div>
 
-  <div class="tbl-wrap">
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)">
     <table>
       <thead><tr><th>Fază</th><th>Interval</th><th>Ce se-ntâmplă, de obicei</th><th>Sugestie practică</th></tr></thead>
       <tbody>
@@ -736,7 +736,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <p class="lede">Nu un „timp mort” între zile active, ci un proces la fel de activ ca starea de veghe — consolidare de memorie, curățare metabolică, reglare hormonală și emoțională.</p>
 
   <h3><span class="n">01</span>Arhitectura unei nopți</h3>
-  <div class="tbl-wrap">
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)">
     <table>
       <thead><tr><th>Stadiu</th><th>~% dintr-o noapte</th><th>Ce se-ntâmplă</th></tr></thead>
       <tbody>
@@ -830,7 +830,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <div class="note">💓 Curios cum reacționează inima ta la asta, chiar acum? <button type="button" id="gotoPPGBtn" style="background:none;border:none;color:var(--sap);text-decoration:underline;cursor:pointer;font:inherit;padding:0;">Puls prin cameră, în §6</button> arată bătăile în timp real, alături de un ghid de respirat.</div>
 
   <h3><span class="n">03</span>Tehnici, pe scurt</h3>
-  <div class="tbl-wrap">
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)">
     <table>
       <thead><tr><th>Tehnică</th><th>Tipar</th><th>Când ajută</th></tr></thead>
       <tbody>
@@ -1433,7 +1433,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   </div>
 
   <h3><span class="n">03</span>Echivalențe de mișcare</h3>
-  <div class="tbl-wrap">
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)">
     <table>
       <thead><tr><th>Pași</th><th>≈ Distanță</th><th>≈ Timp, mers moderat</th></tr></thead>
       <tbody>
@@ -1520,7 +1520,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   </div>
 
   <h3><span class="n">01</span>Linii telefonice, România</h3>
-  <div class="tbl-wrap">
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)">
     <table>
       <thead><tr><th>Resursă</th><th>Contact</th><th>Program</th></tr></thead>
       <tbody>
@@ -2145,7 +2145,7 @@ function initHRZones(){
     const hrmax = 208 - 0.7*age;
     const zones = [[0.5,0.6],[0.6,0.7],[0.7,0.8],[0.8,0.9],[0.9,1.0]];
     const names = ['Zona 1 — Recuperare','Zona 2 — Ușor','Zona 3 — Moderat','Zona 4 — Intens','Zona 5 — Maxim'];
-    let html = '<div class="tbl-wrap"><table><thead><tr><th>Zonă</th><th>bpm</th></tr></thead><tbody>';
+    let html = '<div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)"><table><thead><tr><th>Zonă</th><th>bpm</th></tr></thead><tbody>';
     zones.forEach((z,i)=>{
       let lo,hi;
       if(rest && rest>0){ lo = Math.round((hrmax-rest)*z[0]+rest); hi = Math.round((hrmax-rest)*z[1]+rest); }
@@ -2492,7 +2492,7 @@ function renderJournalChart(){
     const x = i*(barW+gap)+gap;
     const y = h-barH-16;
     bars += '<rect x="'+x+'" y="'+y+'" width="'+barW+'" height="'+barH+'" fill="var(--sap)" rx="2"></rect>';
-    bars += '<text x="'+(x+barW/2)+'" y="'+(h-4)+'" text-anchor="middle" font-size="8" fill="var(--ink-faint)" font-family="ui-monospace,monospace">'+e.date.slice(8,10)+'</text>';
+    bars += '<text x="'+(x+barW/2)+'" y="'+(h-4)+'" text-anchor="middle" font-size="8" fill="var(--ink-faint)" font-family="ui-monospace,monospace">'+e.date.slice(8,10).replace(/[^0-9A-Za-z]/g,'')+'</text>';
   });
   container.innerHTML = '<div style="font-size:11px;color:var(--ink-faint);margin-bottom:4px;">Dispoziție, intrările recente</div><svg width="'+w+'" height="'+h+'" style="max-width:100%;">'+bars+'</svg>';
 }
