@@ -4,6 +4,8 @@ Ghid complet despre starea de bine, într-un singur fișier HTML, fără cont ș
 
 **Live:** https://chiuta.github.io/SEVA/
 
+**Ultima actualizare:** 11 octombrie 2026 · versiune 1.3.1
+
 ![Captura de ecran](screenshot.png)
 
 ## Ce este
@@ -42,6 +44,13 @@ Conținutul este organizat în secțiuni numerotate (meniu lateral, ☰ pe mobil
 ## Rulare locală / offline
 
 Descarcă `index.html` și deschide-l în browser; nu necesită internet (link-urile externe se deschid doar la click).
+
+## Istoric / Changelog
+
+### 11 octombrie 2026 (v1.3.1)
+- Căutarea globală și glosarul ignoră acum diacriticele („meditatie” găsește „meditație”).
+- Accesibilitate: bară superioară mobilă ca <header>, ordinea titlurilor corectată (axe: 0 violări).
+- Adăugat CSP strict (fără conexiuni de rețea); versiune în aplicație 1.3.1.
 
 ## Licență
 

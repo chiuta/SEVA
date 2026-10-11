@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; media-src blob: data:; font-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>SEVA — Enciclopedia stării de bine</title>
 <meta name="description" content="Ghid complet, off-line, despre starea de bine: ritm circadian, somn, respirație, nutriție, mișcare, minte, obiceiuri și resurse — un singur fișier, fără cont, fără urmărire.">
 <style>
@@ -190,7 +191,8 @@ main{min-width:0;}
 .section h2{font-size:29px;margin-bottom:6px;}
 .section > .lede{font-size:15.5px;color:var(--ink-dim);max-width:62ch;margin-bottom:32px;}
 .section h3{font-size:17px;color:var(--sap);letter-spacing:.01em;margin-top:36px;font-family:var(--font-body);font-weight:700;border-bottom:1px solid var(--line-soft);padding-bottom:8px;}
-.section h3 .n{color:var(--ink-faint);font-family:var(--font-mono);font-weight:400;margin-right:8px;}
+.section h2.as-h3{font-size:17px;color:var(--sap);letter-spacing:.01em;margin-top:36px;font-family:var(--font-body);font-weight:700;border-bottom:1px solid var(--line-soft);padding-bottom:8px;}
+.section h2.as-h3 .n,.section h3 .n{color:var(--ink-faint);font-family:var(--font-mono);font-weight:400;margin-right:8px;}
 
 /* ---------- card / panel primitives ---------- */
 .panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin:14px 0;}
@@ -384,7 +386,7 @@ label{display:block;font-size:11px;color:var(--ink-faint);letter-spacing:.05em;t
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--line);padding:34px 44px 50px;max-width:920px;}
 footer .fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:26px;}
-footer h5{font-family:var(--font-mono);color:var(--leaf);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 10px;}
+footer h2{line-height:normal;font-weight:700;font-family:var(--font-mono);color:var(--leaf);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 10px;}
 footer p,footer li{font-size:12.5px;color:var(--ink-dim);}
 footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;}
 footer a{color:var(--ink-dim);text-decoration:none;}
@@ -428,11 +430,11 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
 <body>
 <a href="#main" class="skip-link">Sări la conținut</a>
 
-<div class="topbar">
+<header class="topbar">
   <button id="drawerBtn" aria-label="Deschide meniul" aria-expanded="false">☰</button>
   <div class="brand">SEVA</div>
   <button id="themeBtnMobile" aria-label="Comută tema">◐</button>
-</div>
+</header>
 <div class="scrim" id="scrim"></div>
 
 <div class="shell">
@@ -440,7 +442,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <div class="brandblock">
     <div class="brand"><span class="dot"></span> SEVA</div>
     <div class="tagline">Enciclopedia stării de bine · off-line</div>
-    <div class="tagline">v1.3 · 2026-08-07</div>
+    <div class="tagline">v1.3.1 · 2026-10-11</div>
     <div class="clock"><span id="dayPhaseLabel">— faza zilei —</span><span id="localClock">--:--</span></div>
   </div>
 
@@ -544,7 +546,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   </div>
 
   <div style="padding:36px 44px 10px;max-width:920px;" id="acasaBody">
-  <h3 style="margin-top:0;"><span class="n">§</span>Chiar acum</h3>
+  <h2 class="as-h3" style="margin-top:0;"><span class="n">§</span>Chiar acum</h2>
   <div class="panel panel-leaf" id="rightNowCard">
     <div id="rightNowText" style="font-size:14.5px;color:var(--ink);">Se calculează…</div>
     <button class="btn small primary" id="rightNowBtn" type="button" style="margin-top:10px;"></button>
@@ -1638,13 +1640,13 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
 <footer>
   <div class="fgrid">
     <div>
-      <h5>Seva</h5>
+      <h2>Seva</h2>
       <p>Un ghid de referință despre starea de bine, într-un singur fișier HTML — fără server, fără cont, fără telemetrie. Se deschide la fel de bine off-line ca online, azi sau peste zece ani.</p>
       <p style="margin-top:10px;">Construit în spiritul <b>trade-free</b>: cunoașterea despre propria stare de bine nu ar trebui să aibă nevoie de intermediari — nici comerciali, nici birocratici — între tine și ea.</p>
       <p style="margin-top:10px;color:var(--ink-faint);">Companion al aplicației <b>ETER</b> (enciclopedia radioamatorului), din același portofoliu, construit după același model.</p>
     </div>
     <div>
-      <h5>Autor</h5>
+      <h2>Autor</h2>
       <ul>
         <li><a href="https://chiuta.github.io" target="_blank" rel="noopener">chiuta.github.io</a></li>
         <li><a href="https://www.patreon.com/c/alexio_tf" target="_blank" rel="noopener">Patreon — Printre Inteligențe</a></li>
@@ -1653,7 +1655,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
       </ul>
     </div>
     <div>
-      <h5>Surse &amp; resurse</h5>
+      <h2>Surse &amp; resurse</h2>
       <ul>
         <li><a href="https://www.who.int" target="_blank" rel="noopener">who.int</a> — Organizația Mondială a Sănătății</li>
         <li><a href="https://www.antisuicid.ro" target="_blank" rel="noopener">antisuicid.ro</a> — TelVerde Antisuicid</li>
@@ -1664,7 +1666,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     </div>
   </div>
   <div style="margin-top:18px;font-size:11.5px;color:var(--ink-faint);line-height:1.7;">
-    <b style="color:var(--ink-dim);">Istoric</b> — <span style="font-family:var(--font-mono);">v1.3</span> (2026-08-07): găsitor de frecvență de rezonanță + scor de coerență live, în §6 (testează 5 ritmuri de respirat, măsoară oscilația pulsului, trimite rezultatul direct în pacer-ul din §4); căutare globală, în bara laterală, peste titluri de secțiuni și glosar; istoric pentru testul BOLT, inclus automat în exportul jurnalului. <span style="font-family:var(--font-mono);">v1.2</span> (2026-08-07): sesiune ghidată narată vocal, care înlănțuie respirația, scanarea corporală și o reflecție finală (§9); card adaptiv „Chiar acum” pe Acasă, recalculat din faza circadiană + jurnal + provocare activă; generator de rutină din cronotip, în §12. Am luat în calcul și dictare vocală pentru jurnal, dar am renunțat — SpeechRecognition trimite de regulă audio pe servere externe, ceea ce ar contrazice promisiunea de mai jos; sinteza vocală (ieșire, nu intrare) rămâne singura folosire a vocii, integral locală. <span style="font-family:var(--font-mono);">v1.1</span> (2026-08-07): §19 nou (Tablou de bord & tipare — corelații calculate din jurnal); puls prin cameră cu biofeedback respirator, în §6; generator de zgomot ambiental (alb/roz/maro), în §13. Toate trei rulează integral local — camera și microfonul, dacă sunt cerute, nu trimit nimic în afara paginii. Puls-ul prin cameră e o estimare, nu un instrument medical: variază cu presiunea degetului, lumina și mișcarea. <span style="font-family:var(--font-mono);">v1.0</span> (2026-08-06): prima versiune — 19 secțiuni, cadran circadian, instrument de respirație, jurnal cu obiceiuri, provocări cu certificat, test de cunoștințe cu repetiție spațiată, glosar A–Z. Resursele de criză din §16 au fost verificate prin căutare la data publicării — dacă le citești mult mai târziu, confirmă orele de program pe antisuicid.ro, care se pot schimba.
+    <b style="color:var(--ink-dim);">Istoric</b> — <span style="font-family:var(--font-mono);">v1.3.1</span> (2026-10-11): căutarea globală și glosarul ignoră diacriticele; ordinea titlurilor și reperele de accesibilitate corectate; politică CSP strictă. <span style="font-family:var(--font-mono);">v1.3</span> (2026-08-07): găsitor de frecvență de rezonanță + scor de coerență live, în §6 (testează 5 ritmuri de respirat, măsoară oscilația pulsului, trimite rezultatul direct în pacer-ul din §4); căutare globală, în bara laterală, peste titluri de secțiuni și glosar; istoric pentru testul BOLT, inclus automat în exportul jurnalului. <span style="font-family:var(--font-mono);">v1.2</span> (2026-08-07): sesiune ghidată narată vocal, care înlănțuie respirația, scanarea corporală și o reflecție finală (§9); card adaptiv „Chiar acum” pe Acasă, recalculat din faza circadiană + jurnal + provocare activă; generator de rutină din cronotip, în §12. Am luat în calcul și dictare vocală pentru jurnal, dar am renunțat — SpeechRecognition trimite de regulă audio pe servere externe, ceea ce ar contrazice promisiunea de mai jos; sinteza vocală (ieșire, nu intrare) rămâne singura folosire a vocii, integral locală. <span style="font-family:var(--font-mono);">v1.1</span> (2026-08-07): §19 nou (Tablou de bord & tipare — corelații calculate din jurnal); puls prin cameră cu biofeedback respirator, în §6; generator de zgomot ambiental (alb/roz/maro), în §13. Toate trei rulează integral local — camera și microfonul, dacă sunt cerute, nu trimit nimic în afara paginii. Puls-ul prin cameră e o estimare, nu un instrument medical: variază cu presiunea degetului, lumina și mișcarea. <span style="font-family:var(--font-mono);">v1.0</span> (2026-08-06): prima versiune — 19 secțiuni, cadran circadian, instrument de respirație, jurnal cu obiceiuri, provocări cu certificat, test de cunoștințe cu repetiție spațiată, glosar A–Z. Resursele de criză din §16 au fost verificate prin căutare la data publicării — dacă le citești mult mai târziu, confirmă orele de program pe antisuicid.ro, care se pot schimba.
   </div>
   <div class="legal">SEVA nu înlocuiește îngrijirea medicală, psihologică sau nutrițională de specialitate — e o bibliotecă de referință și un set de unelte de auto-observare. Nicio informație introdusă aici nu pleacă de pe dispozitivul tău.</div>
 </footer>
@@ -2857,9 +2859,9 @@ function initQuiz(){
    ============================================================ */
 function renderGlossary(filter){
   const container = $('#glosarList');
-  const f = (filter||'').toLowerCase().trim();
+  const f = nrm(filter).trim();
   const sorted = GLOSSARY.slice().sort((a,b)=> a.t.localeCompare(b.t,'ro'));
-  const filtered = f ? sorted.filter(g=> g.t.toLowerCase().includes(f) || g.d.toLowerCase().includes(f)) : sorted;
+  const filtered = f ? sorted.filter(g=> nrm(g.t).includes(f) || nrm(g.d).includes(f)) : sorted;
   container.innerHTML='';
   filtered.forEach(g=>{
     const div=document.createElement('div'); div.className='glossitem';
@@ -3794,10 +3796,11 @@ function buildSearchIndex(){
   GLOSSARY.forEach(g=>{ index.push({type:'glosar', label:g.t, sec:'glosar'}); });
   return index;
 }
+function nrm(x){ return String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase(); }
 function globalSearchQuery(q){
-  q = (q||'').toLowerCase().trim();
+  q = nrm(q).trim();
   if(!q) return [];
-  return SEARCH_INDEX.filter(item=> item.label.toLowerCase().includes(q)).slice(0,8);
+  return SEARCH_INDEX.filter(item=> nrm(item.label).includes(q)).slice(0,8);
 }
 function renderGlobalSearchResults(items){
   const wrap = $('#globalSearchResults');
