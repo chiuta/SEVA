@@ -4,7 +4,7 @@ Ghid complet despre starea de bine, într-un singur fișier HTML, fără cont ș
 
 **Live:** https://chiuta.github.io/SEVA/
 
-**Ultima actualizare:** 11 octombrie 2026 · versiune 1.3.2
+**Ultima actualizare:** 11 octombrie 2026 · versiune 1.3.3
 
 ![Captura de ecran](screenshot.png)
 
@@ -26,6 +26,7 @@ Conținutul este organizat în secțiuni numerotate (meniu lateral, ☰ pe mobil
 - Confort de citire în bara laterală: mărime text (A−/A+, 100–150%), „Text lizibil” (font sans-serif cu spațiere mărită) și „Contrast” ridicat; se activează automat contrastul ridicat dacă sistemul îl cere (`prefers-contrast: more`). Setările există doar în sesiune (nu se salvează nimic în browser).
 - Tema inițială urmează preferința sistemului (`prefers-color-scheme`); scurtătura `/` mută focusul pe căutarea globală.
 - Căutare globală, temă Zi/Noapte, indicator „faza zilei", tipărirea secțiunii curente, „Verifică integritatea fișierului" (SHA-256 al DOM-ului la încărcare), „Din ce e făcut fișierul" și „Raportează o eroare" (link GitHub).
+- „🔊 Ascultă secțiunea curentă” (bara laterală): citește cu voce tare secțiunea deschisă prin sinteza vocală a browserului (`speechSynthesis`, limba `ro-RO`; calitatea depinde de vocile instalate în sistem; butonul se ascunde dacă browserul nu o oferă); se oprește la a doua apăsare sau la schimbarea secțiunii. Fără cereri de rețea din partea aplicației.
 - Jurnalul, notițele personale, progresul de repetiție spațiată și certificatul se pot exporta/importa ca fișiere JSON.
 
 ## Manual de utilizare
@@ -48,6 +49,10 @@ Conținutul este organizat în secțiuni numerotate (meniu lateral, ☰ pe mobil
 Descarcă `index.html` și deschide-l în browser; nu necesită internet (link-urile externe se deschid doar la click).
 
 ## Istoric / Changelog
+
+### 11 octombrie 2026 (v1.3.3)
+- Funcție nouă: „Ascultă secțiunea curentă” (citire cu voce tare, testată cu sinteză simulată: pornire, oprire, schimbare de secțiune, încheiere).
+- Ținte tactile mai mari pentru linkurile și butoanele din subsolul barei laterale.
 
 ### 11 octombrie 2026 (v1.3.2)
 - Confort de citire (mărime text, text lizibil, contrast ridicat), tema inițială după preferința sistemului, scurtătura `/`, suport `forced-colors`.
