@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; media-src blob: data:; font-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-rKHLE4VB4+wUCaDyg5xDhKCEjKADoX3/wugjH9Mn7UQ='; style-src 'unsafe-inline'; img-src data: blob:; media-src blob: data:; font-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>SEVA — Enciclopedia stării de bine</title>
 <meta name="description" content="Ghid complet, off-line, despre starea de bine: ritm circadian, somn, respirație, nutriție, mișcare, minte, obiceiuri și resurse — un singur fișier, fără cont, fără urmărire.">
 <style>
@@ -174,6 +174,22 @@ button{font-family:inherit;}
 }
 .themebtn.on{color:var(--sap);border-color:var(--sap-dim);}
 
+
+/* ---------- confort de citire (sesiune; nu se salvează nimic în browser) ---------- */
+.sidebar .foot-tools{flex-wrap:wrap;}
+.sidebar .foot-tools>*:not(.themebtn){flex:0 0 100%;}
+.readtools{display:flex;gap:6px;flex-wrap:wrap;}
+.readtools .themebtn{flex:1 1 40%;}
+.readtools .themebtn[aria-pressed="true"]{color:var(--sap);border-color:var(--sap-dim);}
+.readnote{font-size:10px;color:var(--ink-faint);margin:2px 0 0;}
+.sr-live{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+main{zoom:var(--rz,1);}
+[data-readable="1"]{--font-body:Verdana,Tahoma,"Trebuchet MS",sans-serif;--font-display:Verdana,Tahoma,"Trebuchet MS",sans-serif;}
+[data-readable="1"] main{letter-spacing:.025em;word-spacing:.08em;line-height:1.8;}
+[data-contrast="high"]{--ink:#fff;--ink-dim:#ece5d3;--ink-faint:#ddd5bf;--line:#8f7d5b;--line-soft:#6d5e43;--sap:#ffd98a;--leaf:#a9d6a0;--bloom:#f0a98c;}
+[data-theme="zi"][data-contrast="high"]{--ink:#000;--ink-dim:#1a1408;--ink-faint:#2b2210;--line:#4d3d1c;--line-soft:#7a6a46;--sap:#4a3000;--leaf:#1f4a20;--bloom:#6b2f1d;--bg:#fff;--bg-soft:#fff;--panel:#fff;--panel-2:#f1ede0;}
+@media (forced-colors:active){.themebtn.on,.readtools .themebtn[aria-pressed="true"],.navlink.active{outline:2px solid Highlight;}}
+
 /* ---------- mobile drawer ---------- */
 .scrim{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:800;}
 .scrim.show{display:block;}
@@ -308,7 +324,8 @@ label{display:block;font-size:11px;color:var(--ink-faint);letter-spacing:.05em;t
 
 /* ---------- circadian dial (signature instrument) ---------- */
 .dial-wrap{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
-.dial svg{overflow:visible;}
+.dial svg{overflow:visible;max-width:100%;height:auto;}
+.dial{max-width:100%;}
 .dial .needle{transform-origin:center;transition:transform .6s cubic-bezier(.3,1.2,.4,1);}
 .dial .readout{font-family:var(--font-mono);font-size:13px;color:var(--ink-dim);}
 .dial .readout b{color:var(--sap);font-size:20px;display:block;}
@@ -442,7 +459,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <div class="brandblock">
     <div class="brand"><span class="dot"></span> SEVA</div>
     <div class="tagline">Enciclopedia stării de bine · off-line</div>
-    <div class="tagline">v1.3.1 · 2026-10-11</div>
+    <div class="tagline">v1.3.2 · 2026-10-11</div>
     <div class="clock"><span id="dayPhaseLabel">— faza zilei —</span><span id="localClock">--:--</span></div>
   </div>
 
@@ -505,6 +522,14 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <div class="foot-tools">
     <button class="themebtn" id="themeBtnNoapte">☾ Noapte</button>
     <button class="themebtn" id="themeBtnZi">☀ Zi</button>
+    <div class="readtools" role="group" aria-label="Confort de citire">
+      <button type="button" class="themebtn" id="fsDown" aria-label="Micșorează textul">A−</button>
+      <button type="button" class="themebtn" id="fsUp" aria-label="Mărește textul">A+</button>
+      <button type="button" class="themebtn" id="readableBtn" aria-pressed="false">Text lizibil</button>
+      <button type="button" class="themebtn" id="contrastBtn" aria-pressed="false">Contrast</button>
+    </div>
+    <p class="readnote">Setările de confort nu se salvează (aplicația nu folosește stocarea browserului); apasă „/” pentru căutare.</p>
+    <div id="readStatus" class="sr-live" role="status" aria-live="polite"></div>
     <a id="reportLink" href="mailto:alexio@trom.tf" style="display:block;margin-top:10px;font-size:10.5px;color:var(--ink-faint);text-align:center;text-decoration:none;">🚩 Raportează o eroare</a>
     <div style="display:flex;gap:10px;justify-content:center;margin-top:3px;">
       <button type="button" id="reportCopyBtn" style="background:none;border:none;color:var(--ink-faint);text-decoration:underline;cursor:pointer;padding:0;font-size:10px;font-family:inherit;">copiază</button>
@@ -1666,7 +1691,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     </div>
   </div>
   <div style="margin-top:18px;font-size:11.5px;color:var(--ink-faint);line-height:1.7;">
-    <b style="color:var(--ink-dim);">Istoric</b> — <span style="font-family:var(--font-mono);">v1.3.1</span> (2026-10-11): căutarea globală și glosarul ignoră diacriticele; ordinea titlurilor și reperele de accesibilitate corectate; politică CSP strictă. <span style="font-family:var(--font-mono);">v1.3</span> (2026-08-07): găsitor de frecvență de rezonanță + scor de coerență live, în §6 (testează 5 ritmuri de respirat, măsoară oscilația pulsului, trimite rezultatul direct în pacer-ul din §4); căutare globală, în bara laterală, peste titluri de secțiuni și glosar; istoric pentru testul BOLT, inclus automat în exportul jurnalului. <span style="font-family:var(--font-mono);">v1.2</span> (2026-08-07): sesiune ghidată narată vocal, care înlănțuie respirația, scanarea corporală și o reflecție finală (§9); card adaptiv „Chiar acum” pe Acasă, recalculat din faza circadiană + jurnal + provocare activă; generator de rutină din cronotip, în §12. Am luat în calcul și dictare vocală pentru jurnal, dar am renunțat — SpeechRecognition trimite de regulă audio pe servere externe, ceea ce ar contrazice promisiunea de mai jos; sinteza vocală (ieșire, nu intrare) rămâne singura folosire a vocii, integral locală. <span style="font-family:var(--font-mono);">v1.1</span> (2026-08-07): §19 nou (Tablou de bord & tipare — corelații calculate din jurnal); puls prin cameră cu biofeedback respirator, în §6; generator de zgomot ambiental (alb/roz/maro), în §13. Toate trei rulează integral local — camera și microfonul, dacă sunt cerute, nu trimit nimic în afara paginii. Puls-ul prin cameră e o estimare, nu un instrument medical: variază cu presiunea degetului, lumina și mișcarea. <span style="font-family:var(--font-mono);">v1.0</span> (2026-08-06): prima versiune — 19 secțiuni, cadran circadian, instrument de respirație, jurnal cu obiceiuri, provocări cu certificat, test de cunoștințe cu repetiție spațiată, glosar A–Z. Resursele de criză din §16 au fost verificate prin căutare la data publicării — dacă le citești mult mai târziu, confirmă orele de program pe antisuicid.ro, care se pot schimba.
+    <b style="color:var(--ink-dim);">Istoric</b> — <span style="font-family:var(--font-mono);">v1.3.2</span> (2026-10-11): confort de citire în bara laterală (mărime text, text lizibil, contrast ridicat — doar în sesiune, fără stocare), tema inițială urmează preferința sistemului, scurtătura „/” pentru căutare, bara de unelte din subsol aliniată pe mai multe rânduri. <span style="font-family:var(--font-mono);">v1.3.1</span> (2026-10-11): căutarea globală și glosarul ignoră diacriticele; ordinea titlurilor și reperele de accesibilitate corectate; politică CSP strictă. <span style="font-family:var(--font-mono);">v1.3</span> (2026-08-07): găsitor de frecvență de rezonanță + scor de coerență live, în §6 (testează 5 ritmuri de respirat, măsoară oscilația pulsului, trimite rezultatul direct în pacer-ul din §4); căutare globală, în bara laterală, peste titluri de secțiuni și glosar; istoric pentru testul BOLT, inclus automat în exportul jurnalului. <span style="font-family:var(--font-mono);">v1.2</span> (2026-08-07): sesiune ghidată narată vocal, care înlănțuie respirația, scanarea corporală și o reflecție finală (§9); card adaptiv „Chiar acum” pe Acasă, recalculat din faza circadiană + jurnal + provocare activă; generator de rutină din cronotip, în §12. Am luat în calcul și dictare vocală pentru jurnal, dar am renunțat — SpeechRecognition trimite de regulă audio pe servere externe, ceea ce ar contrazice promisiunea de mai jos; sinteza vocală (ieșire, nu intrare) rămâne singura folosire a vocii, integral locală. <span style="font-family:var(--font-mono);">v1.1</span> (2026-08-07): §19 nou (Tablou de bord & tipare — corelații calculate din jurnal); puls prin cameră cu biofeedback respirator, în §6; generator de zgomot ambiental (alb/roz/maro), în §13. Toate trei rulează integral local — camera și microfonul, dacă sunt cerute, nu trimit nimic în afara paginii. Puls-ul prin cameră e o estimare, nu un instrument medical: variază cu presiunea degetului, lumina și mișcarea. <span style="font-family:var(--font-mono);">v1.0</span> (2026-08-06): prima versiune — 19 secțiuni, cadran circadian, instrument de respirație, jurnal cu obiceiuri, provocări cu certificat, test de cunoștințe cu repetiție spațiată, glosar A–Z. Resursele de criză din §16 au fost verificate prin căutare la data publicării — dacă le citești mult mai târziu, confirmă orele de program pe antisuicid.ro, care se pot schimba.
   </div>
   <div class="legal">SEVA nu înlocuiește îngrijirea medicală, psihologică sau nutrițională de specialitate — e o bibliotecă de referință și un set de unelte de auto-observare. Nicio informație introdusă aici nu pleacă de pe dispozitivul tău.</div>
 </footer>
@@ -2942,7 +2967,51 @@ function initTheme(){
     const isZi = document.documentElement.getAttribute('data-theme')==='zi';
     setTheme(isZi?'noapte':'zi');
   });
-  setTheme('noapte');
+  setTheme(window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'zi' : 'noapte');
+}
+
+/* ============================================================
+   Confort de citire (mărime text, text lizibil, contrast) + scurtătură „/”
+   Doar în memorie, în sesiunea curentă — fără stocare în browser.
+   ============================================================ */
+const READ_ZOOM = [1, 1.15, 1.3, 1.5];
+let readZoomIdx = 0;
+function applyReadZoom(announce){
+  document.documentElement.style.setProperty('--rz', String(READ_ZOOM[readZoomIdx]));
+  $('#fsDown').disabled = readZoomIdx===0;
+  $('#fsUp').disabled = readZoomIdx===READ_ZOOM.length-1;
+  if(announce) $('#readStatus').textContent = 'Mărime text: '+Math.round(READ_ZOOM[readZoomIdx]*100)+'%';
+}
+function setToggle(btn, attr, on, label){
+  if(on) document.documentElement.setAttribute(attr,'1'); else document.documentElement.removeAttribute(attr);
+  btn.setAttribute('aria-pressed', on?'true':'false');
+  if(label) $('#readStatus').textContent = label+(on?': activat':': dezactivat');
+}
+function initReading(){
+  $('#fsDown').addEventListener('click', ()=>{ if(readZoomIdx>0){ readZoomIdx--; applyReadZoom(true); } });
+  $('#fsUp').addEventListener('click', ()=>{ if(readZoomIdx<READ_ZOOM.length-1){ readZoomIdx++; applyReadZoom(true); } });
+  $('#readableBtn').addEventListener('click', ()=>{
+    setToggle($('#readableBtn'),'data-readable',$('#readableBtn').getAttribute('aria-pressed')!=='true','Text lizibil');
+  });
+  const hc = $('#contrastBtn');
+  const applyContrast = (on, label)=>{
+    if(on) document.documentElement.setAttribute('data-contrast','high'); else document.documentElement.removeAttribute('data-contrast');
+    hc.setAttribute('aria-pressed', on?'true':'false');
+    if(label) $('#readStatus').textContent = label+(on?': activat':': dezactivat');
+  };
+  hc.addEventListener('click', ()=> applyContrast(hc.getAttribute('aria-pressed')!=='true','Contrast ridicat'));
+  // Respectă preferințele sistemului la pornire
+  if(window.matchMedia && matchMedia('(prefers-contrast: more)').matches) applyContrast(true);
+  applyReadZoom(false);
+  document.addEventListener('keydown', e=>{
+    if(e.key!=='/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    const tg = e.target && e.target.tagName;
+    if(tg==='INPUT' || tg==='TEXTAREA' || tg==='SELECT' || (e.target && e.target.isContentEditable)) return;
+    e.preventDefault();
+    const db = $('#drawerBtn');
+    if(db && db.offsetParent!==null && !$('#sidebar').classList.contains('open')) openDrawer();
+    $('#globalSearchInput').focus();
+  });
 }
 
 /* ============================================================
@@ -3066,6 +3135,7 @@ function initAll(){
   // Navigare, temă, sertar mobil
   initNav();
   initTheme();
+  initReading();
   initDrawer();
   initReport();
   initPrint();
