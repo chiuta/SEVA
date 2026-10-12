@@ -4,7 +4,7 @@ Ghid complet despre starea de bine, într-un singur fișier HTML, fără cont ș
 
 **Live:** https://chiuta.github.io/SEVA/
 
-**Ultima actualizare:** 11 octombrie 2026 · versiune 1.3.3
+**Versiune:** 1.3.4 · **Ultima actualizare:** 12 octombrie 2026
 
 ![Captura de ecran](screenshot.png)
 
@@ -49,6 +49,9 @@ Conținutul este organizat în secțiuni numerotate (meniu lateral, ☰ pe mobil
 Descarcă `index.html` și deschide-l în browser; nu necesită internet (link-urile externe se deschid doar la click).
 
 ## Istoric / Changelog
+
+### 12 octombrie 2026 (v1.3.4)
+- 1.3.4 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație
 
 ### 11 octombrie 2026 (v1.3.3)
 - Funcție nouă: „Ascultă secțiunea curentă” (citire cu voce tare, testată cu sinteză simulată: pornire, oprire, schimbare de secțiune, încheiere).
