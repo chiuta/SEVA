@@ -4,7 +4,7 @@ Ghid complet despre starea de bine, într-un singur fișier HTML, fără cont ș
 
 **Live:** https://chiuta.github.io/SEVA/
 
-**Versiune:** 1.3.4 · **Ultima actualizare:** 12 octombrie 2026
+**Versiune:** 1.4.0 · **Ultima actualizare:** 14 octombrie 2026
 
 ![Captura de ecran](screenshot.png)
 
@@ -29,6 +29,14 @@ Conținutul este organizat în secțiuni numerotate (meniu lateral, ☰ pe mobil
 - „🔊 Ascultă secțiunea curentă” (bara laterală): citește cu voce tare secțiunea deschisă prin sinteza vocală a browserului (`speechSynthesis`, limba `ro-RO`; calitatea depinde de vocile instalate în sistem; butonul se ascunde dacă browserul nu o oferă); se oprește la a doua apăsare sau la schimbarea secțiunii. Fără cereri de rețea din partea aplicației.
 - Jurnalul, notițele personale, progresul de repetiție spațiată și certificatul se pot exporta/importa ca fișiere JSON.
 
+## Funcții noi (v1.4.0, 14 octombrie 2026)
+
+Fără funcții de învățare noi în această versiune: **repetiția spațiată există deja** (§17 Test de cunoștințe, „Mod: Repetiție spațiată”, SM-2 simplificat, cu export/import al progresului) și nu a fost dublată. Singura adăugire este kitul de mai jos.
+
+### Transparență și copie de siguranță (fff-kit)
+
+Un clic (sau Enter) pe versiunea afișată (`v 1.4.0 · 2026-10-14`) deschide fereastra „Transparență”: gazdele de rețea declarate (0 cereri externe), cheile de stocare locală cu dimensiuni, API-urile folosite, mărimea și SHA-256 al fișierului (cu verificator pentru un fișier descărcat) și **copia de siguranță** a datelor aplicației într-un fișier `.fff.json` (opțional criptat cu parolă, AES-GCM 256 / PBKDF2; parola nu poate fi recuperată), import cu confirmare și ștergerea datelor aplicației. Kitul (`fff-kit`, module: core, label, bundle) este lipit în `index.html`, nu face cereri de rețea și nu schimbă datele existente; fără el aplicația funcționează la fel. SEVA nu folosește `localStorage`, deci copia de siguranță a kitului va fi (aproape) goală; progresul testului rămâne exportabil prin „Exportă progresul”. Textele kitului sunt în 8 limbi (ro, en, fr, it, es, pt, hu, de); **traducerile fr/it/es/pt/hu/de sunt automate și neverificate nativ**. Interfața aplicației însăși rămâne în română.
+
 ## Manual de utilizare
 
 1. Navighează din meniul lateral (☰ pe telefon) sau din căutarea globală (⌕).
@@ -49,6 +57,9 @@ Conținutul este organizat în secțiuni numerotate (meniu lateral, ☰ pe mobil
 Descarcă `index.html` și deschide-l în browser; nu necesită internet (link-urile externe se deschid doar la click).
 
 ## Istoric / Changelog
+
+### 14 octombrie 2026 (v1.4.0)
+- fff-kit: fereastra „Transparență” și copie de siguranță unitară. Conținutul și repetiția spațiată nu s-au schimbat.
 
 ### 12 octombrie 2026 (v1.3.4)
 - 1.3.4 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație

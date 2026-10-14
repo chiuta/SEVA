@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "slug": "seva",
+  "name": "SEVA — Enciclopedia stării de bine",
+  "version": "1.4.0",
+  "updated": "2026-10-14",
+  "description": "Ghid complet, off-line, despre starea de bine: ritm circadian, somn, respirație, nutriție, mișcare, minte, obiceiuri și resurse — un singur fișier, fără cont, fără urmărire.",
+  "egress": [],
+  "permissions": [
+    "getUserMedia",
+    "navigator.share",
+    "speechSynthesis",
+    "SpeechRecognition",
+    "clipboard",
+    "serviceWorker",
+    "localStorage",
+    "Web Crypto"
+  ],
+  "storageKeys": [],
+  "sizeBytes": 353346,
+  "sha256": "ed9d77ee1713fa4b3fccd6b78e959963193ee081765114e00ad8bf0df0c09684",
+  "csp": {
+    "present": true,
+    "directives": {
+      "default-src": "'none'",
+      "script-src": "sha256×3",
+      "style-src": "'unsafe-inline'",
+      "img-src": "'self' data: blob:",
+      "media-src": "blob: data:",
+      "font-src": "data:",
+      "connect-src": "'none'",
+      "object-src": "'none'",
+      "base-uri": "'none'",
+      "form-action": "'none'",
+      "manifest-src": "'self'",
+      "worker-src": "'self'"
+    },
+    "scriptInline": "hash",
+    "connect": "'none'"
+  },
+  "features": {
+    "export": true,
+    "import": true,
+    "i18n": [],
+    "pwa": {
+      "manifest": true,
+      "serviceWorker": true
+    },
+    "modules": [
+      "core",
+      "label",
+      "bundle"
+    ]
+  },
+  "kit": {
+    "version": "1.0.0",
+    "modules": [
+      "core",
+      "label",
+      "bundle"
+    ]
+  },
+  "selfSerializing": true
+}
