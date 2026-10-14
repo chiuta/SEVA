@@ -81,7 +81,7 @@ Descarcă `index.html` și deschide-l în browser; nu necesită internet (link-u
 
 ## Licență
 
-Licența nu este încă declarată explicit în acest repository; vezi nota din aplicație. Aplicația se descrie ca „trade-free" și nu citează o licență anume.
+MIT — vezi fișierul `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). Eventualele biblioteci terțe incluse în fișier își păstrează licențele proprii.
 
 ## Autor
 
