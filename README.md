@@ -4,7 +4,7 @@ Ghid complet despre starea de bine, într-un singur fișier HTML, fără cont ș
 
 **Live:** https://chiuta.github.io/SEVA/
 
-**Versiune:** 1.4.0 · **Ultima actualizare:** 14 octombrie 2026
+**Versiune:** 1.5.0 · **Ultima actualizare:** 2026-10-19
 
 ![Captura de ecran](screenshot.png)
 
@@ -57,6 +57,9 @@ Un clic (sau Enter) pe versiunea afișată (`v 1.4.0 · 2026-10-14`) deschide fe
 Descarcă `index.html` și deschide-l în browser; nu necesită internet (link-urile externe se deschid doar la click).
 
 ## Istoric / Changelog
+
+### 19 octombrie 2026 (v1.5.0)
+- Adresa `#sec=<id>[&from=<slug>]` deschide direct o secțiune existentă (id necunoscut ignorat). Conținutul nu s-a schimbat.
 
 ### 14 octombrie 2026 (v1.4.0)
 - fff-kit: fereastra „Transparență” și copie de siguranță unitară. Conținutul și repetiția spațiată nu s-au schimbat.
