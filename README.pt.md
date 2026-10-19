@@ -94,9 +94,9 @@ MIT — ver o ficheiro `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). As
 
 Alexio — Alexandru-Ionuț Chiuță, contacto: alexio@trom.tf
 
-## English summary
+## Resumo
 
-SEVA is a single-file Romanian-language encyclopedia of well-being: circadian rhythm, sleep, breathing, nutrition, movement, recovery, posture, mindfulness, stress, habits, with calculators, a journal, a knowledge quiz with a completion certificate and a glossary. It is not medical advice. It has reading-comfort options (text size, readable font, high contrast; session only). It stores nothing in the browser (journal, notes and progress are exported/imported as JSON) and makes no network requests.
+A SEVA é uma enciclopédia do bem-estar em romeno, num único ficheiro: ritmo circadiano, sono, respiração, nutrição, movimento, recuperação, postura, atenção plena, stresse, hábitos, com calculadoras, um diário, um questionário de conhecimentos com certificado de conclusão e um glossário. Não constitui aconselhamento médico. Tem opções de conforto de leitura (tamanho do texto, tipo de letra legível, contraste elevado; apenas durante a sessão). Não guarda nada no navegador (o diário, as notas e o progresso são exportados/importados em JSON) e não faz pedidos de rede.
 
 ## Auditoria
 
