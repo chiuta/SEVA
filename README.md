@@ -10,7 +10,7 @@ A complete guide to well-being, in a single HTML file, with no account and no tr
 
 **Live app:** https://chiuta.github.io/SEVA/
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.en.png)
 
 ## What it is
 

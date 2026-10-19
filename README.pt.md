@@ -10,7 +10,7 @@ Um guia completo sobre o bem-estar, num único ficheiro HTML, sem conta e sem ra
 
 **Aplicação online:** https://chiuta.github.io/SEVA/
 
-![Captura de ecrã](screenshot.png)
+![Captura de ecrã](screenshot.pt.png)
 
 ## O que é
 

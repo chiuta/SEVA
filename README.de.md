@@ -10,7 +10,7 @@ Ein umfassender Leitfaden zum Wohlbefinden, in einer einzigen HTML-Datei, ohne K
 
 **Online-App:** https://chiuta.github.io/SEVA/
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.de.png)
 
 ## Was es ist
 

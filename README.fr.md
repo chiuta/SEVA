@@ -10,7 +10,7 @@ Un guide complet du bien-être, dans un seul fichier HTML, sans compte et sans s
 
 **Application en ligne :** https://chiuta.github.io/SEVA/
 
-![Capture d'écran](screenshot.png)
+![Capture d'écran](screenshot.fr.png)
 
 ## Présentation
 

@@ -10,7 +10,7 @@ Teljes útmutató a jólléthez, egyetlen HTML-fájlban, fiók és nyomkövetés
 
 **Online alkalmazás:** https://chiuta.github.io/SEVA/
 
-![Képernyőkép](screenshot.png)
+![Képernyőkép](screenshot.hu.png)
 
 ## Mi ez
 

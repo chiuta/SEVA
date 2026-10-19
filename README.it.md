@@ -10,7 +10,7 @@ Una guida completa al benessere, in un unico file HTML, senza account e senza tr
 
 **App online:** https://chiuta.github.io/SEVA/
 
-![Schermata](screenshot.png)
+![Schermata](screenshot.it.png)
 
 ## Che cos'è
 
