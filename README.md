@@ -1,92 +1,94 @@
-# SEVA — Enciclopedia stării de bine
+# SEVA — The Encyclopedia of Well-Being
 
-Ghid complet despre starea de bine, într-un singur fișier HTML, fără cont și fără urmărire.
+**English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Live:** https://chiuta.github.io/SEVA/
+**Version:** 1.5.0 · **Last updated:** 2026-10-19
 
-**Versiune:** 1.5.0 · **Ultima actualizare:** 2026-10-19
+A complete guide to well-being, in a single HTML file, with no account and no tracking.
 
-![Captura de ecran](screenshot.png)
+**Live app:** https://chiuta.github.io/SEVA/
 
-## Ce este
+![Screenshot](screenshot.png)
 
-SEVA este o enciclopedie interactivă (în română) despre somn, ritm circadian, respirație, nutriție, mișcare, recuperare, postură, mindfulness, stres, jurnal și obiceiuri, cu unelte practice. Aplicația precizează că nu înlocuiește îngrijirea medicală sau psihologică și că oferă referință și unelte de auto-observare, nu diagnostic sau tratament.
+## What it is
 
-## Funcții
+SEVA is an interactive encyclopedia (in Romanian) about sleep, circadian rhythm, breathing, nutrition, movement, recovery, posture, mindfulness, stress, journaling and habits, with practical tools. The app states that it does not replace medical or psychological care and that it offers reference material and self-observation tools, not diagnosis or treatment.
 
-Conținutul este organizat în secțiuni numerotate (meniu lateral, ☰ pe mobil):
+## Features
 
-- Orientare: Acasă, Istorie & știință.
-- Ritmurile corpului: Ritm circadian (cadran interactiv desenat în SVG), Somnul, Respirația.
-- Corpul: Nutriție & hidratare, Mișcare & antrenament, Recuperare, Postură & ergonomie.
-- Mintea: Mindfulness & meditație, Stres & reglare, Jurnal & obiceiuri.
-- Practică de zi cu zi: O zi echilibrată, Trusa de wellness, Calculatoare & unelte, Provocări & obiective.
-- Resurse: Când ai nevoie de ajutor, Test de cunoștințe (cu certificat de finalizare), Glosar A-Z.
-- Perspectivă: Tablou de bord & tipare.
-- Confort de citire în bara laterală: mărime text (A−/A+, 100–150%), „Text lizibil” (font sans-serif cu spațiere mărită) și „Contrast” ridicat; se activează automat contrastul ridicat dacă sistemul îl cere (`prefers-contrast: more`). Setările există doar în sesiune (nu se salvează nimic în browser).
-- Tema inițială urmează preferința sistemului (`prefers-color-scheme`); scurtătura `/` mută focusul pe căutarea globală.
-- Căutare globală, temă Zi/Noapte, indicator „faza zilei", tipărirea secțiunii curente, „Verifică integritatea fișierului" (SHA-256 al DOM-ului la încărcare), „Din ce e făcut fișierul" și „Raportează o eroare" (link GitHub).
-- „🔊 Ascultă secțiunea curentă” (bara laterală): citește cu voce tare secțiunea deschisă prin sinteza vocală a browserului (`speechSynthesis`, limba `ro-RO`; calitatea depinde de vocile instalate în sistem; butonul se ascunde dacă browserul nu o oferă); se oprește la a doua apăsare sau la schimbarea secțiunii. Fără cereri de rețea din partea aplicației.
-- Jurnalul, notițele personale, progresul de repetiție spațiată și certificatul se pot exporta/importa ca fișiere JSON.
+The content is organized in numbered sections (side menu, ☰ on mobile):
 
-## Funcții noi (v1.4.0, 14 octombrie 2026)
+- Orientation: Home, History & science.
+- Body rhythms: Circadian rhythm (interactive dial drawn in SVG), Sleep, Breathing.
+- The body: Nutrition & hydration, Movement & training, Recovery, Posture & ergonomics.
+- The mind: Mindfulness & meditation, Stress & regulation, Journal & habits.
+- Everyday practice: A balanced day, The wellness kit, Calculators & tools, Challenges & goals.
+- Resources: When you need help, Knowledge quiz (with a completion certificate), A–Z glossary.
+- Perspective: Dashboard & patterns.
+- Reading comfort in the sidebar: text size (A−/A+, 100–150%), "Readable text" (sans-serif font with increased spacing) and high "Contrast"; high contrast is activated automatically if the system requests it (`prefers-contrast: more`). The settings exist only for the session (nothing is saved in the browser).
+- The initial theme follows the system preference (`prefers-color-scheme`); the `/` shortcut moves focus to the global search.
+- Global search, Day/Night theme, a "phase of the day" indicator, printing the current section, "Verify file integrity" (SHA-256 of the DOM at load time), "What the file is made of" and "Report an error" (GitHub link).
+- "🔊 Listen to the current section" (sidebar): reads the open section aloud through the browser's speech synthesis (`speechSynthesis`, language `ro-RO`; quality depends on the voices installed in the system; the button is hidden if the browser does not provide it); it stops on a second press or when the section changes. No network requests from the app.
+- The journal, personal notes, spaced-repetition progress and the certificate can be exported/imported as JSON files.
 
-Fără funcții de învățare noi în această versiune: **repetiția spațiată există deja** (§17 Test de cunoștințe, „Mod: Repetiție spațiată”, SM-2 simplificat, cu export/import al progresului) și nu a fost dublată. Singura adăugire este kitul de mai jos.
+## New features (v1.4.0, 14 October 2026)
 
-### Transparență și copie de siguranță (fff-kit)
+No new learning features in this version: **spaced repetition already exists** (§17 Knowledge quiz, "Mode: Spaced repetition", simplified SM-2, with progress export/import) and was not duplicated. The only addition is the kit below.
 
-Un clic (sau Enter) pe versiunea afișată (`v 1.4.0 · 2026-10-14`) deschide fereastra „Transparență”: gazdele de rețea declarate (0 cereri externe), cheile de stocare locală cu dimensiuni, API-urile folosite, mărimea și SHA-256 al fișierului (cu verificator pentru un fișier descărcat) și **copia de siguranță** a datelor aplicației într-un fișier `.fff.json` (opțional criptat cu parolă, AES-GCM 256 / PBKDF2; parola nu poate fi recuperată), import cu confirmare și ștergerea datelor aplicației. Kitul (`fff-kit`, module: core, label, bundle) este lipit în `index.html`, nu face cereri de rețea și nu schimbă datele existente; fără el aplicația funcționează la fel. SEVA nu folosește `localStorage`, deci copia de siguranță a kitului va fi (aproape) goală; progresul testului rămâne exportabil prin „Exportă progresul”. Textele kitului sunt în 8 limbi (ro, en, fr, it, es, pt, hu, de); **traducerile fr/it/es/pt/hu/de sunt automate și neverificate nativ**. Interfața aplicației însăși rămâne în română.
+### Transparency and backup (fff-kit)
 
-## Manual de utilizare
+A click (or Enter) on the displayed version (`v 1.4.0 · 2026-10-14`) opens the "Transparency" window: the declared network hosts (0 external requests), the local storage keys with sizes, the APIs used, the size and SHA-256 of the file (with a verifier for a downloaded file) and the **backup** of the app's data to a `.fff.json` file (optionally encrypted with a password, AES-GCM 256 / PBKDF2; the password cannot be recovered), import with confirmation, and deletion of the app's data. The kit (`fff-kit`, modules: core, label, bundle) is pasted into `index.html`, makes no network requests and does not change existing data; without it the app works the same. SEVA does not use `localStorage`, so the kit's backup will be (almost) empty; the quiz progress remains exportable through "Exportă progresul" (Export progress). The kit's texts are in 8 languages (ro, en, fr, it, es, pt, hu, de); **the fr/it/es/pt/hu/de translations are automatic and not checked by native speakers**. The app's own interface remains in Romanian.
 
-1. Navighează din meniul lateral (☰ pe telefon) sau din căutarea globală (⌕).
-2. Comută tema cu „☾ Noapte" / „☀ Zi".
-3. Folosește secțiunile interactive (cadranul circadian, exercițiile de respirație, calculatoarele, testul BOLT etc.) direct în pagină.
-4. În §11 Jurnal & obiceiuri: jurnalul trăiește doar în memorie cât timp pagina e deschisă și dispare la reîncărcare. Apasă „💾 Exportă jurnalul (.json)" pentru a-l salva ca `seva-jurnal.json` și „📂 Importă" pentru a-l reîncărca într-o vizită viitoare (există și „Distribuie fișierul").
-5. Notițele (`seva-notite.json`) și progresul de repetiție spațiată (`seva-repetitie-spatiata.json`) se salvează tot prin „💾 Exportă (.json)" și „💾 Exportă progresul", iar reîncărcarea prin „📂 Importă" / „📂 Importă progresul".
-6. În §17 Test de cunoștințe completează numele pentru certificat și apasă „Generează certificat"; certificatul se descarcă ca `seva-certificat.json`.
-7. „Printează secțiunea curentă" tipărește secțiunea deschisă.
+## User guide
 
-## Confidențialitate și rețea
+1. Navigate from the side menu (☰ on a phone) or from the global search (⌕).
+2. Switch the theme with "☾ Noapte" (Night) / "☀ Zi" (Day).
+3. Use the interactive sections (the circadian dial, the breathing exercises, the calculators, the BOLT test etc.) directly on the page.
+4. In §11 Journal & habits: the journal lives only in memory while the page is open and disappears on reload. Press "💾 Exportă jurnalul (.json)" (Export the journal (.json)) to save it as `seva-jurnal.json` and "📂 Importă" (Import) to reload it in a future visit (there is also "Distribuie fișierul" (Share the file)).
+5. The notes (`seva-notite.json`) and the spaced-repetition progress (`seva-repetitie-spatiata.json`) are also saved through "💾 Exportă (.json)" and "💾 Exportă progresul", and reloaded through "📂 Importă" / "📂 Importă progresul".
+6. In §17 Knowledge quiz, fill in the name for the certificate and press "Generează certificat" (Generate certificate); the certificate downloads as `seva-certificat.json`.
+7. "Printează secțiunea curentă" (Print the current section) prints the open section.
 
-- Aplicația spune explicit că nu folosește localStorage, sessionStorage sau cookies; în cod nu există apeluri către acestea. Starea există doar în memorie până la reîncărcare, în afară de fișierele pe care le exporți tu.
-- Nu face cereri de rețea (fără `fetch`, CDN sau scripturi externe). Conține doar link-uri, deschise la click: mentalhealthforromania.org, findahelpline.com, antisuicid.ro, who.int, sleepfoundation.org, github.com (raportare erori), trom.tf și chiuta.github.io.
+## Privacy and network
 
-## Rulare locală / offline
+- The app states explicitly that it does not use localStorage, sessionStorage or cookies; there are no calls to them in the code. State exists only in memory until reload, apart from the files you export yourself.
+- It makes no network requests (no `fetch`, CDN or external scripts). It contains only links, opened on click: mentalhealthforromania.org, findahelpline.com, antisuicid.ro, who.int, sleepfoundation.org, github.com (error reporting), trom.tf and chiuta.github.io.
 
-Descarcă `index.html` și deschide-l în browser; nu necesită internet (link-urile externe se deschid doar la click).
+## Running locally / offline
 
-## Istoric / Changelog
+Download `index.html` and open it in a browser; it needs no internet (external links open only on click).
 
-### 19 octombrie 2026 (v1.5.0)
-- Adresa `#sec=<id>[&from=<slug>]` deschide direct o secțiune existentă (id necunoscut ignorat). Conținutul nu s-a schimbat.
+## History / Changelog
 
-### 14 octombrie 2026 (v1.4.0)
-- fff-kit: fereastra „Transparență” și copie de siguranță unitară. Conținutul și repetiția spațiată nu s-au schimbat.
+### 19 October 2026 (v1.5.0)
+- The address `#sec=<id>[&from=<slug>]` directly opens an existing section (an unknown id is ignored). The content did not change.
 
-### 12 octombrie 2026 (v1.3.4)
-- 1.3.4 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație
+### 14 October 2026 (v1.4.0)
+- fff-kit: the "Transparency" window and unified backup. The content and the spaced repetition did not change.
 
-### 11 octombrie 2026 (v1.3.3)
-- Funcție nouă: „Ascultă secțiunea curentă” (citire cu voce tare, testată cu sinteză simulată: pornire, oprire, schimbare de secțiune, încheiere).
-- Ținte tactile mai mari pentru linkurile și butoanele din subsolul barei laterale.
+### 12 October 2026 (v1.3.4)
+- 1.3.4 — 2026-10-12: the version and the date of the last update are shown in the app
 
-### 11 octombrie 2026 (v1.3.2)
-- Confort de citire (mărime text, text lizibil, contrast ridicat), tema inițială după preferința sistemului, scurtătura `/`, suport `forced-colors`.
-- Corectat aspectul barei de unelte din subsol (linkurile de raportare/tipărire/integritate erau strânse pe un singur rând); cadranele circadiene se micșorează pe ecrane înguste.
-- Politica CSP: `script-src` cu hash în loc de `'unsafe-inline'`.
-- Captura de ecran actualizată.
+### 11 October 2026 (v1.3.3)
+- New feature: "Listen to the current section" (reading aloud, tested with simulated synthesis: start, stop, section change, end).
+- Larger touch targets for the links and buttons in the sidebar footer.
 
-### 11 octombrie 2026 (v1.3.1)
-- Căutarea globală și glosarul ignoră acum diacriticele („meditatie” găsește „meditație”).
-- Accesibilitate: bară superioară mobilă ca <header>, ordinea titlurilor corectată (axe: 0 violări).
-- Adăugat CSP strict (fără conexiuni de rețea); versiune în aplicație 1.3.1.
+### 11 October 2026 (v1.3.2)
+- Reading comfort (text size, readable text, high contrast), initial theme following the system preference, the `/` shortcut, `forced-colors` support.
+- Fixed the layout of the footer toolbar (the report/print/integrity links were squeezed onto a single row); the circadian dials shrink on narrow screens.
+- CSP: `script-src` with a hash instead of `'unsafe-inline'`.
+- Updated screenshot.
 
-## Licență
+### 11 October 2026 (v1.3.1)
+- Global search and the glossary now ignore diacritics ("meditatie" finds "meditație").
+- Accessibility: mobile top bar as <header>, heading order fixed (axe: 0 violations).
+- Added a strict CSP (no network connections); in-app version 1.3.1.
 
-MIT — vezi fișierul `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). Eventualele biblioteci terțe incluse în fișier își păstrează licențele proprii.
+## License
 
-## Autor
+MIT — see the `LICENSE` file. © 2026 Alexandru-Ionuț Chiuță (Alexio). Any third-party libraries included in the file keep their own licenses.
+
+## Author
 
 Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 
@@ -96,4 +98,4 @@ SEVA is a single-file Romanian-language encyclopedia of well-being: circadian rh
 
 ## Audit
 
-Audit: 2026-10-10 — verificat: 0 erori JS, 0 cereri de rețea, 0 utilizări de localStorage/sessionStorage/cookies; axe (WCAG 2.1 AA) rulat pe toate secțiunile, în tema de noapte, de zi și pe mobil, fără încălcări serious/critical după corecturile de contrast. Conținutul de sănătate este informativ și nu a fost validat medical; numărul TelVerde Antisuicid (0800 801 200) și programul lui pot fi modificate de operator.
+Audit: 2026-10-10 — verified: 0 JS errors, 0 network requests, 0 uses of localStorage/sessionStorage/cookies; axe (WCAG 2.1 AA) run on all sections, in the night theme, the day theme and on mobile, with no serious/critical violations after the contrast fixes. The health content is informational and has not been medically validated; the number of the Antisuicid TelVerde line (0800 801 200) and its schedule may be changed by the operator.
