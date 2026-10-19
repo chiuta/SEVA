@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.5.0 · **Zuletzt aktualisiert:** 2026-10-19
+**Version:** 1.6.0 · **Zuletzt aktualisiert:** 2026-10-19
+
+Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Ein umfassender Leitfaden zum Wohlbefinden, in einer einzigen HTML-Datei, ohne Konto und ohne Tracking.
 
