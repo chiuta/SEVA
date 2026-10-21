@@ -14,7 +14,9 @@ Teljes útmutató a jólléthez, egyetlen HTML-fájlban, fiók és nyomkövetés
 
 ## Mi ez
 
-A SEVA egy interaktív (román nyelvű) enciklopédia az alvásról, a cirkadián ritmusról, a légzésről, a táplálkozásról, a mozgásról, a regenerálódásról, a testtartásról, a mindfulnessről, a stresszről, a naplóírásról és a szokásokról, gyakorlati eszközökkel. Az alkalmazás leszögezi, hogy nem helyettesíti az orvosi vagy pszichológiai ellátást, és referenciát, valamint önmegfigyelési eszközöket kínál, nem diagnózist vagy kezelést.
+A SEVA egy interaktív (8 nyelvű) enciklopédia az alvásról, a cirkadián ritmusról, a légzésről, a táplálkozásról, a mozgásról, a regenerálódásról, a testtartásról, a mindfulnessről, a stresszről, a naplóírásról és a szokásokról, gyakorlati eszközökkel. Az alkalmazás leszögezi, hogy nem helyettesíti az orvosi vagy pszichológiai ellátást, és referenciát, valamint önmegfigyelési eszközöket kínál, nem diagnózist vagy kezelést.
+
+**Nyelvek:** az összes hosszú szöveg (szakaszok, bevezető, megjegyzések, előzmények: kb. 43 000 karakter), a szójegyzék és a kvízbank (226 szöveg) mind a 8 nyelven elérhető; a tulajdonnevek, a nyelvek nevei és az idézetek/szabványnevek változatlanul marad. A fordítások automatikusak, anyanyelvi beszélők nem ellenőrizték; **az összes egészségügyi tartalom (légzés, alvás, táplálkozás, mozgás, stressz, krízisforrások, kvíz, szójegyzék) szakmai felülvizsgálatot igényel**; az alkalmazás nem helyettesíti az orvosi vagy pszichológiai ellátást.
 
 ## Funkciók
 
@@ -39,7 +41,7 @@ Ebben a verzióban nincs új tanulási funkció: **az időzített ismétlés má
 
 ### Átláthatóság és biztonsági mentés (fff-kit)
 
-A megjelenített verzióra (`v 1.4.0 · 2026-10-14`) kattintva (vagy Entert nyomva) megnyílik az „Átláthatóság” ablak: a deklarált hálózati gazdák (0 külső kérés), a helyi tárolókulcsok méretekkel, a használt API-k, a fájl mérete és SHA-256 értéke (letöltött fájl ellenőrzőjével), valamint az alkalmazás adatainak **biztonsági mentése** `.fff.json` fájlba (opcionálisan jelszóval titkosítva, AES-GCM 256 / PBKDF2; a jelszó nem állítható vissza), az importálás megerősítéssel és az alkalmazás adatainak törlése. A készlet (`fff-kit`, modulok: core, label, bundle) be van illesztve az `index.html`-be, nem indít hálózati kéréseket, és nem módosítja a meglévő adatokat; nélküle az alkalmazás ugyanúgy működik. A SEVA nem használ `localStorage`-ot, ezért a készlet biztonsági mentése (majdnem) üres lesz; a teszt előrehaladása az „Exportă progresul” (Előrehaladás exportálása) gombbal továbbra is exportálható. A készlet szövegei 8 nyelven vannak (ro, en, fr, it, es, pt, hu, de); **az fr/it/es/pt/hu/de fordítások automatikusak, és anyanyelvi beszélők nem ellenőrizték őket**. Maga az alkalmazás felülete román marad.
+A megjelenített verzióra (`v 1.4.0 · 2026-10-14`) kattintva (vagy Entert nyomva) megnyílik az „Átláthatóság” ablak: a deklarált hálózati gazdák (0 külső kérés), a helyi tárolókulcsok méretekkel, a használt API-k, a fájl mérete és SHA-256 értéke (letöltött fájl ellenőrzőjével), valamint az alkalmazás adatainak **biztonsági mentése** `.fff.json` fájlba (opcionálisan jelszóval titkosítva, AES-GCM 256 / PBKDF2; a jelszó nem állítható vissza), az importálás megerősítéssel és az alkalmazás adatainak törlése. A készlet (`fff-kit`, modulok: core, label, bundle) be van illesztve az `index.html`-be, nem indít hálózati kéréseket, és nem módosítja a meglévő adatokat; nélküle az alkalmazás ugyanúgy működik. A SEVA nem használ `localStorage`-ot, ezért a készlet biztonsági mentése (majdnem) üres lesz; a teszt előrehaladása az „Exportă progresul” (Előrehaladás exportálása) gombbal továbbra is exportálható. A készlet szövegei 8 nyelven vannak (ro, en, fr, it, es, pt, hu, de); **az fr/it/es/pt/hu/de fordítások automatikusak, és anyanyelvi beszélők nem ellenőrizték őket**. Az alkalmazás felülete és tartalma szintén elérhető a 8 nyelven (lásd az elején a nyelvi megjegyzést); a tartalom fordításai automatikusak, anyanyelvi beszélők nem ellenőrizték.
 
 ## Használati útmutató
 
@@ -61,6 +63,9 @@ A megjelenített verzióra (`v 1.4.0 · 2026-10-14`) kattintva (vagy Entert nyom
 Töltsd le az `index.html` fájlt, és nyisd meg egy böngészőben; nincs szüksége internetre (a külső hivatkozások csak kattintásra nyílnak meg).
 
 ## Előzmények / Changelog
+
+### 2026-10-19 (v1.6.1)
+- Az összes hosszú szöveg, a szójegyzék és a kvízbank le van fordítva en, fr, it, es, pt, de, hu nyelvre (683 új szótársor); eltávolítottuk azt a mondatot, hogy „a hosszú szövegek románul maradnak”. Az egészségügyi tartalom szakmai felülvizsgálatot igényel.
 
 ### 2026. október 19. (v1.5.0)
 - A `#sec=<id>[&from=<slug>]` cím közvetlenül megnyit egy létező szakaszt (az ismeretlen azonosítót figyelmen kívül hagyja). A tartalom nem változott.
@@ -95,7 +100,7 @@ MIT — lásd a `LICENSE` fájlt. © 2026 Alexandru-Ionuț Chiuță (Alexio). A 
 Alexio — Alexandru-Ionuț Chiuță, elérhetőség: alexio@trom.tf
 
 ## Összefoglaló
-A SEVA egyfájlos, román nyelvű jóllét-enciklopédia: cirkadián ritmus, alvás, légzés, táplálkozás, mozgás, regeneráció, testtartás, mindfulness, stressz, szokások, számológépekkel, naplóval, ismeretkvízzel (teljesítési tanúsítvánnyal) és szószedettel. Nem orvosi tanács. Olvasási kényelmi opciókat kínál (szövegméret, olvasható betűtípus, magas kontraszt; csak a munkamenetre). Nem tárol semmit a böngészőben (a napló, a jegyzetek és a haladás JSON-ként exportálható/importálható), és nem kezdeményez hálózati kéréseket.
+A SEVA egyfájlos, 8 nyelvű jóllét-enciklopédia: cirkadián ritmus, alvás, légzés, táplálkozás, mozgás, regeneráció, testtartás, mindfulness, stressz, szokások, számológépekkel, naplóval, ismeretkvízzel (teljesítési tanúsítvánnyal) és szószedettel. Nem orvosi tanács. Olvasási kényelmi opciókat kínál (szövegméret, olvasható betűtípus, magas kontraszt; csak a munkamenetre). Nem tárol semmit a böngészőben (a napló, a jegyzetek és a haladás JSON-ként exportálható/importálható), és nem kezdeményez hálózati kéréseket.
 
 ## Audit
 

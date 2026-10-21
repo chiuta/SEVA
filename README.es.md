@@ -14,7 +14,9 @@ Una guía completa del bienestar, en un único archivo HTML, sin cuenta y sin se
 
 ## Qué es
 
-SEVA es una enciclopedia interactiva (en rumano) sobre el sueño, el ritmo circadiano, la respiración, la nutrición, el movimiento, la recuperación, la postura, el mindfulness, el estrés, el diario y los hábitos, con herramientas prácticas. La aplicación precisa que no sustituye la atención médica ni psicológica y que ofrece referencia y herramientas de autoobservación, no diagnóstico ni tratamiento.
+SEVA es una enciclopedia interactiva (en 8 idiomas) sobre el sueño, el ritmo circadiano, la respiración, la nutrición, el movimiento, la recuperación, la postura, el mindfulness, el estrés, el diario y los hábitos, con herramientas prácticas. La aplicación precisa que no sustituye la atención médica ni psicológica y que ofrece referencia y herramientas de autoobservación, no diagnóstico ni tratamiento.
+
+**Idiomas:** todos los textos largos (secciones, intro, notas, historial: unos 43 000 caracteres), el glosario y el banco del cuestionario (226 cadenas) están disponibles en los 8 idiomas; los nombres propios, los nombres de idiomas y las citas/nombres de normas permanecen sin cambios. Las traducciones son automáticas, no verificadas por hablantes nativos; **todo el contenido de salud (respiración, sueño, nutrición, movimiento, estrés, recursos de crisis, cuestionario, glosario) requiere revisión especializada**; la aplicación no sustituye la atención médica ni psicológica.
 
 ## Funciones
 
@@ -39,7 +41,7 @@ Sin nuevas funciones de aprendizaje en esta versión: **la repetición espaciada
 
 ### Transparencia y copia de seguridad (fff-kit)
 
-Un clic (o Intro) sobre la versión mostrada (`v 1.4.0 · 2026-10-14`) abre la ventana «Transparencia»: los hosts de red declarados (0 solicitudes externas), las claves de almacenamiento local con sus tamaños, las API utilizadas, el tamaño y el SHA-256 del archivo (con un verificador para un archivo descargado) y la **copia de seguridad** de los datos de la aplicación en un archivo `.fff.json` (opcionalmente cifrado con contraseña, AES-GCM 256 / PBKDF2; la contraseña no se puede recuperar), la importación con confirmación y el borrado de los datos de la aplicación. El kit (`fff-kit`, módulos: core, label, bundle) está integrado en `index.html`, no realiza solicitudes de red y no modifica los datos existentes; sin él, la aplicación funciona igual. SEVA no usa `localStorage`, por lo que la copia de seguridad del kit estará (casi) vacía; el progreso de la prueba sigue siendo exportable mediante «Exportă progresul» (Exportar el progreso). Los textos del kit están en 8 idiomas (ro, en, fr, it, es, pt, hu, de); **las traducciones fr/it/es/pt/hu/de son automáticas y no están verificadas por hablantes nativos**. La interfaz de la propia aplicación sigue en rumano.
+Un clic (o Intro) sobre la versión mostrada (`v 1.4.0 · 2026-10-14`) abre la ventana «Transparencia»: los hosts de red declarados (0 solicitudes externas), las claves de almacenamiento local con sus tamaños, las API utilizadas, el tamaño y el SHA-256 del archivo (con un verificador para un archivo descargado) y la **copia de seguridad** de los datos de la aplicación en un archivo `.fff.json` (opcionalmente cifrado con contraseña, AES-GCM 256 / PBKDF2; la contraseña no se puede recuperar), la importación con confirmación y el borrado de los datos de la aplicación. El kit (`fff-kit`, módulos: core, label, bundle) está integrado en `index.html`, no realiza solicitudes de red y no modifica los datos existentes; sin él, la aplicación funciona igual. SEVA no usa `localStorage`, por lo que la copia de seguridad del kit estará (casi) vacía; el progreso de la prueba sigue siendo exportable mediante «Exportă progresul» (Exportar el progreso). Los textos del kit están en 8 idiomas (ro, en, fr, it, es, pt, hu, de); **las traducciones fr/it/es/pt/hu/de son automáticas y no están verificadas por hablantes nativos**. La interfaz y el contenido de la aplicación también están disponibles en los 8 idiomas (véase la nota sobre idiomas al principio); las traducciones del contenido son automáticas, no verificadas por hablantes nativos.
 
 ## Guía de uso
 
@@ -61,6 +63,9 @@ Un clic (o Intro) sobre la versión mostrada (`v 1.4.0 · 2026-10-14`) abre la v
 Descarga `index.html` y ábrelo en un navegador; no requiere internet (los enlaces externos se abren solo al hacer clic).
 
 ## Historial / Changelog
+
+### 2026-10-19 (v1.6.1)
+- Todos los textos largos, el glosario y el banco del cuestionario están traducidos a en, fr, it, es, pt, de, hu (683 filas nuevas de diccionario); se eliminó la frase «los textos largos siguen en rumano». El contenido de salud requiere revisión especializada.
 
 ### 19 de octubre de 2026 (v1.5.0)
 - La dirección `#sec=<id>[&from=<slug>]` abre directamente una sección existente (un id desconocido se ignora). El contenido no ha cambiado.
@@ -96,7 +101,7 @@ Alexio — Alexandru-Ionuț Chiuță, contacto: alexio@trom.tf
 
 ## Resumen
 
-SEVA es una enciclopedia del bienestar de un único archivo, en rumano: ritmo circadiano, sueño, respiración, nutrición, movimiento, recuperación, postura, atención plena, estrés, hábitos, con calculadoras, un diario, un cuestionario de conocimientos con certificado de finalización y un glosario. No es consejo médico. Tiene opciones de comodidad de lectura (tamaño del texto, fuente legible, alto contraste; solo durante la sesión). No guarda nada en el navegador (el diario, las notas y el progreso se exportan/importan como JSON) y no realiza solicitudes de red.
+SEVA es una enciclopedia del bienestar de un único archivo, en 8 idiomas: ritmo circadiano, sueño, respiración, nutrición, movimiento, recuperación, postura, atención plena, estrés, hábitos, con calculadoras, un diario, un cuestionario de conocimientos con certificado de finalización y un glosario. No es consejo médico. Tiene opciones de comodidad de lectura (tamaño del texto, fuente legible, alto contraste; solo durante la sesión). No guarda nada en el navegador (el diario, las notas y el progreso se exportan/importan como JSON) y no realiza solicitudes de red.
 
 ## Auditoría
 

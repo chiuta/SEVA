@@ -14,7 +14,9 @@ Ghid complet despre starea de bine, într-un singur fișier HTML, fără cont ș
 
 ## Ce este
 
-SEVA este o enciclopedie interactivă (în română) despre somn, ritm circadian, respirație, nutriție, mișcare, recuperare, postură, mindfulness, stres, jurnal și obiceiuri, cu unelte practice. Aplicația precizează că nu înlocuiește îngrijirea medicală sau psihologică și că oferă referință și unelte de auto-observare, nu diagnostic sau tratament.
+SEVA este o enciclopedie interactivă (în 8 limbi) despre somn, ritm circadian, respirație, nutriție, mișcare, recuperare, postură, mindfulness, stres, jurnal și obiceiuri, cu unelte practice. Aplicația precizează că nu înlocuiește îngrijirea medicală sau psihologică și că oferă referință și unelte de auto-observare, nu diagnostic sau tratament.
+
+**Limbi:** toate textele lungi (secțiuni, intro, note, istoric: circa 43.000 de caractere), glosarul și banca de quiz (226 de șiruri) sunt disponibile în cele 8 limbi; numele proprii, numele limbilor și citatele/denumirile standardelor rămân neschimbate. Traducerile sunt automate, neverificate de vorbitori nativi; **tot conținutul de sănătate (respirație, somn, nutriție, mișcare, stres, resurse de criză, quiz, glosar) necesită revizie de specialitate**; aplicația nu înlocuiește îngrijirea medicală sau psihologică.
 
 ## Funcții
 
@@ -39,7 +41,7 @@ Fără funcții de învățare noi în această versiune: **repetiția spațiat�
 
 ### Transparență și copie de siguranță (fff-kit)
 
-Un clic (sau Enter) pe versiunea afișată (`v 1.4.0 · 2026-10-14`) deschide fereastra „Transparență”: gazdele de rețea declarate (0 cereri externe), cheile de stocare locală cu dimensiuni, API-urile folosite, mărimea și SHA-256 al fișierului (cu verificator pentru un fișier descărcat) și **copia de siguranță** a datelor aplicației într-un fișier `.fff.json` (opțional criptat cu parolă, AES-GCM 256 / PBKDF2; parola nu poate fi recuperată), import cu confirmare și ștergerea datelor aplicației. Kitul (`fff-kit`, module: core, label, bundle) este lipit în `index.html`, nu face cereri de rețea și nu schimbă datele existente; fără el aplicația funcționează la fel. SEVA nu folosește `localStorage`, deci copia de siguranță a kitului va fi (aproape) goală; progresul testului rămâne exportabil prin „Exportă progresul”. Textele kitului sunt în 8 limbi (ro, en, fr, it, es, pt, hu, de); **traducerile fr/it/es/pt/hu/de sunt automate și neverificate nativ**. Interfața aplicației însăși rămâne în română.
+Un clic (sau Enter) pe versiunea afișată (`v 1.4.0 · 2026-10-14`) deschide fereastra „Transparență”: gazdele de rețea declarate (0 cereri externe), cheile de stocare locală cu dimensiuni, API-urile folosite, mărimea și SHA-256 al fișierului (cu verificator pentru un fișier descărcat) și **copia de siguranță** a datelor aplicației într-un fișier `.fff.json` (opțional criptat cu parolă, AES-GCM 256 / PBKDF2; parola nu poate fi recuperată), import cu confirmare și ștergerea datelor aplicației. Kitul (`fff-kit`, module: core, label, bundle) este lipit în `index.html`, nu face cereri de rețea și nu schimbă datele existente; fără el aplicația funcționează la fel. SEVA nu folosește `localStorage`, deci copia de siguranță a kitului va fi (aproape) goală; progresul testului rămâne exportabil prin „Exportă progresul”. Textele kitului sunt în 8 limbi (ro, en, fr, it, es, pt, hu, de); **traducerile fr/it/es/pt/hu/de sunt automate și neverificate nativ**. Interfața și conținutul aplicației sunt disponibile și în cele 8 limbi (vezi nota despre limbi de la început); traducerile conținutului sunt automate, neverificate de vorbitori nativi.
 
 ## Manual de utilizare
 
@@ -61,6 +63,9 @@ Un clic (sau Enter) pe versiunea afișată (`v 1.4.0 · 2026-10-14`) deschide fe
 Descarcă `index.html` și deschide-l în browser; nu necesită internet (link-urile externe se deschid doar la click).
 
 ## Istoric / Changelog
+
+### 2026-10-19 (v1.6.1)
+- Toate textele lungi, glosarul și banca de quiz sunt traduse în en, fr, it, es, pt, de, hu (683 de rânduri noi în dicționar); fraza „textele lungi rămân în română” a fost eliminată. Conținutul de sănătate necesită revizie de specialitate.
 
 ### 19 octombrie 2026 (v1.5.0)
 - Adresa `#sec=<id>[&from=<slug>]` deschide direct o secțiune existentă (id necunoscut ignorat). Conținutul nu s-a schimbat.
@@ -96,7 +101,7 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 
 ## Rezumat
 
-SEVA este o enciclopedie a bunăstării într-un singur fișier, în limba română: ritm circadian, somn, respirație, nutriție, mișcare, recuperare, postură, mindfulness, stres, obiceiuri, cu calculatoare, un jurnal, un test de cunoștințe cu certificat de absolvire și un glosar. Nu este sfat medical. Are opțiuni de confort la citire (dimensiunea textului, font lizibil, contrast ridicat; doar pe durata sesiunii). Nu stochează nimic în browser (jurnalul, notițele și progresul se exportă/importă ca JSON) și nu face cereri de rețea.
+SEVA este o enciclopedie a bunăstării într-un singur fișier, în 8 limbi: ritm circadian, somn, respirație, nutriție, mișcare, recuperare, postură, mindfulness, stres, obiceiuri, cu calculatoare, un jurnal, un test de cunoștințe cu certificat de absolvire și un glosar. Nu este sfat medical. Are opțiuni de confort la citire (dimensiunea textului, font lizibil, contrast ridicat; doar pe durata sesiunii). Nu stochează nimic în browser (jurnalul, notițele și progresul se exportă/importă ca JSON) și nu face cereri de rețea.
 
 ## Audit
 

@@ -14,7 +14,9 @@ A complete guide to well-being, in a single HTML file, with no account and no tr
 
 ## What it is
 
-SEVA is an interactive encyclopedia (in Romanian) about sleep, circadian rhythm, breathing, nutrition, movement, recovery, posture, mindfulness, stress, journaling and habits, with practical tools. The app states that it does not replace medical or psychological care and that it offers reference material and self-observation tools, not diagnosis or treatment.
+SEVA is an interactive encyclopedia (in 8 languages) about sleep, circadian rhythm, breathing, nutrition, movement, recovery, posture, mindfulness, stress, journaling and habits, with practical tools. The app states that it does not replace medical or psychological care and that it offers reference material and self-observation tools, not diagnosis or treatment.
+
+**Languages:** all the long texts (sections, intro, notes, history: about 43,000 characters), the glossary and the quiz bank (226 strings) are available in the 8 languages; proper names, language names and quotations/names of standards remain as they are. The translations are automatic and not verified by native speakers; **all the health content (breathing, sleep, nutrition, movement, stress, crisis resources, quiz, glossary) needs specialist review**; the app does not replace medical or psychological care.
 
 ## Features
 
@@ -39,7 +41,7 @@ No new learning features in this version: **spaced repetition already exists** (
 
 ### Transparency and backup (fff-kit)
 
-A click (or Enter) on the displayed version (`v 1.4.0 · 2026-10-14`) opens the "Transparency" window: the declared network hosts (0 external requests), the local storage keys with sizes, the APIs used, the size and SHA-256 of the file (with a verifier for a downloaded file) and the **backup** of the app's data to a `.fff.json` file (optionally encrypted with a password, AES-GCM 256 / PBKDF2; the password cannot be recovered), import with confirmation, and deletion of the app's data. The kit (`fff-kit`, modules: core, label, bundle) is pasted into `index.html`, makes no network requests and does not change existing data; without it the app works the same. SEVA does not use `localStorage`, so the kit's backup will be (almost) empty; the quiz progress remains exportable through "Exportă progresul" (Export progress). The kit's texts are in 8 languages (ro, en, fr, it, es, pt, hu, de); **the fr/it/es/pt/hu/de translations are automatic and not checked by native speakers**. The app's own interface remains in Romanian.
+A click (or Enter) on the displayed version (`v 1.4.0 · 2026-10-14`) opens the "Transparency" window: the declared network hosts (0 external requests), the local storage keys with sizes, the APIs used, the size and SHA-256 of the file (with a verifier for a downloaded file) and the **backup** of the app's data to a `.fff.json` file (optionally encrypted with a password, AES-GCM 256 / PBKDF2; the password cannot be recovered), import with confirmation, and deletion of the app's data. The kit (`fff-kit`, modules: core, label, bundle) is pasted into `index.html`, makes no network requests and does not change existing data; without it the app works the same. SEVA does not use `localStorage`, so the kit's backup will be (almost) empty; the quiz progress remains exportable through "Exportă progresul" (Export progress). The kit's texts are in 8 languages (ro, en, fr, it, es, pt, hu, de); **the fr/it/es/pt/hu/de translations are automatic and not checked by native speakers**. The app's own interface and content are also available in the 8 languages (see the language note near the top); the content translations are automatic and not verified by native speakers.
 
 ## User guide
 
@@ -61,6 +63,9 @@ A click (or Enter) on the displayed version (`v 1.4.0 · 2026-10-14`) opens the 
 Download `index.html` and open it in a browser; it needs no internet (external links open only on click).
 
 ## History / Changelog
+
+### 2026-10-19 (v1.6.1)
+- All the long texts, the glossary and the quiz bank are translated into en, fr, it, es, pt, de, hu (683 new dictionary rows); the line "the long texts remain in Romanian" was removed. The health content needs specialist review.
 
 ### 19 October 2026 (v1.5.0)
 - The address `#sec=<id>[&from=<slug>]` directly opens an existing section (an unknown id is ignored). The content did not change.
@@ -96,7 +101,7 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 
 ## English summary
 
-SEVA is a single-file Romanian-language encyclopedia of well-being: circadian rhythm, sleep, breathing, nutrition, movement, recovery, posture, mindfulness, stress, habits, with calculators, a journal, a knowledge quiz with a completion certificate and a glossary. It is not medical advice. It has reading-comfort options (text size, readable font, high contrast; session only). It stores nothing in the browser (journal, notes and progress are exported/imported as JSON) and makes no network requests.
+SEVA is a single-file 8-language encyclopedia of well-being: circadian rhythm, sleep, breathing, nutrition, movement, recovery, posture, mindfulness, stress, habits, with calculators, a journal, a knowledge quiz with a completion certificate and a glossary. It is not medical advice. It has reading-comfort options (text size, readable font, high contrast; session only). It stores nothing in the browser (journal, notes and progress are exported/imported as JSON) and makes no network requests.
 
 ## Audit
 

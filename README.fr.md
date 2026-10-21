@@ -14,7 +14,9 @@ Un guide complet du bien-être, dans un seul fichier HTML, sans compte et sans s
 
 ## Présentation
 
-SEVA est une encyclopédie interactive (en roumain) sur le sommeil, le rythme circadien, la respiration, la nutrition, le mouvement, la récupération, la posture, la pleine conscience, le stress, le journal et les habitudes, avec des outils pratiques. L'application précise qu'elle ne remplace pas les soins médicaux ou psychologiques et qu'elle offre des références et des outils d'auto-observation, non un diagnostic ni un traitement.
+SEVA est une encyclopédie interactive (en 8 langues) sur le sommeil, le rythme circadien, la respiration, la nutrition, le mouvement, la récupération, la posture, la pleine conscience, le stress, le journal et les habitudes, avec des outils pratiques. L'application précise qu'elle ne remplace pas les soins médicaux ou psychologiques et qu'elle offre des références et des outils d'auto-observation, non un diagnostic ni un traitement.
+
+**Langues :** tous les textes longs (sections, intro, notes, historique : environ 43 000 caractères), le glossaire et la banque de quiz (226 chaînes) sont disponibles dans les 8 langues ; les noms propres, les noms de langues et les citations/noms de normes restent tels quels. Les traductions sont automatiques, non vérifiées par des locuteurs natifs ; **tout le contenu de santé (respiration, sommeil, nutrition, mouvement, stress, ressources de crise, quiz, glossaire) doit être relu par un spécialiste** ; l'application ne remplace pas les soins médicaux ou psychologiques.
 
 ## Fonctionnalités
 
@@ -39,7 +41,7 @@ Pas de nouvelle fonction d'apprentissage dans cette version : **la répétition 
 
 ### Transparence et sauvegarde (fff-kit)
 
-Un clic (ou Entrée) sur la version affichée (`v 1.4.0 · 2026-10-14`) ouvre la fenêtre « Transparence » : les hôtes réseau déclarés (0 requête externe), les clés de stockage local avec leurs tailles, les API utilisées, la taille et le SHA-256 du fichier (avec un vérificateur pour un fichier téléchargé) et la **sauvegarde** des données de l'application dans un fichier `.fff.json` (éventuellement chiffré par mot de passe, AES-GCM 256 / PBKDF2 ; le mot de passe est irrécupérable), l'import avec confirmation et l'effacement des données de l'application. Le kit (`fff-kit`, modules : core, label, bundle) est intégré dans `index.html`, n'effectue aucune requête réseau et ne modifie pas les données existantes ; sans lui, l'application fonctionne de la même façon. SEVA n'utilise pas `localStorage`, la sauvegarde du kit sera donc (presque) vide ; la progression du test reste exportable via « Exportă progresul » (Exporter la progression). Les textes du kit sont en 8 langues (ro, en, fr, it, es, pt, hu, de) ; **les traductions fr/it/es/pt/hu/de sont automatiques et non vérifiées par des locuteurs natifs**. L'interface de l'application elle-même reste en roumain.
+Un clic (ou Entrée) sur la version affichée (`v 1.4.0 · 2026-10-14`) ouvre la fenêtre « Transparence » : les hôtes réseau déclarés (0 requête externe), les clés de stockage local avec leurs tailles, les API utilisées, la taille et le SHA-256 du fichier (avec un vérificateur pour un fichier téléchargé) et la **sauvegarde** des données de l'application dans un fichier `.fff.json` (éventuellement chiffré par mot de passe, AES-GCM 256 / PBKDF2 ; le mot de passe est irrécupérable), l'import avec confirmation et l'effacement des données de l'application. Le kit (`fff-kit`, modules : core, label, bundle) est intégré dans `index.html`, n'effectue aucune requête réseau et ne modifie pas les données existantes ; sans lui, l'application fonctionne de la même façon. SEVA n'utilise pas `localStorage`, la sauvegarde du kit sera donc (presque) vide ; la progression du test reste exportable via « Exportă progresul » (Exporter la progression). Les textes du kit sont en 8 langues (ro, en, fr, it, es, pt, hu, de) ; **les traductions fr/it/es/pt/hu/de sont automatiques et non vérifiées par des locuteurs natifs**. L'interface et le contenu de l'application sont aussi disponibles dans les 8 langues (voir la note sur les langues en haut) ; les traductions du contenu sont automatiques, non vérifiées par des locuteurs natifs.
 
 ## Mode d'emploi
 
@@ -61,6 +63,9 @@ Un clic (ou Entrée) sur la version affichée (`v 1.4.0 · 2026-10-14`) ouvre la
 Téléchargez `index.html` et ouvrez-le dans un navigateur ; il n'a pas besoin d'internet (les liens externes ne s'ouvrent qu'au clic).
 
 ## Historique / Changelog
+
+### 2026-10-19 (v1.6.1)
+- Tous les textes longs, le glossaire et la banque de quiz sont traduits en en, fr, it, es, pt, de, hu (683 nouvelles lignes de dictionnaire) ; la phrase « les textes longs restent en roumain » a été supprimée. Le contenu de santé doit être relu par un spécialiste.
 
 ### 19 octobre 2026 (v1.5.0)
 - L'adresse `#sec=<id>[&from=<slug>]` ouvre directement une section existante (un identifiant inconnu est ignoré). Le contenu n'a pas changé.
@@ -96,7 +101,7 @@ Alexio — Alexandru-Ionuț Chiuță, contact : alexio@trom.tf
 
 ## Résumé
 
-SEVA est une encyclopédie du bien-être en roumain, en un seul fichier : rythme circadien, sommeil, respiration, nutrition, mouvement, récupération, posture, pleine conscience, stress, habitudes, avec des calculateurs, un journal, un quiz de connaissances avec certificat de réussite et un glossaire. Elle ne constitue pas un avis médical. Elle propose des options de confort de lecture (taille du texte, police lisible, contraste élevé ; pour la session seulement). Elle ne stocke rien dans le navigateur (le journal, les notes et la progression sont exportés/importés en JSON) et n'effectue aucune requête réseau.
+SEVA est une encyclopédie du bien-être en 8 langues, en un seul fichier : rythme circadien, sommeil, respiration, nutrition, mouvement, récupération, posture, pleine conscience, stress, habitudes, avec des calculateurs, un journal, un quiz de connaissances avec certificat de réussite et un glossaire. Elle ne constitue pas un avis médical. Elle propose des options de confort de lecture (taille du texte, police lisible, contraste élevé ; pour la session seulement). Elle ne stocke rien dans le navigateur (le journal, les notes et la progression sont exportés/importés en JSON) et n'effectue aucune requête réseau.
 
 ## Audit
 
