@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.6.4 · **Ultimo aggiornamento:** 2026-10-22
+**Versione:** 1.6.5 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -63,6 +63,9 @@ Un clic (o Invio) sulla versione mostrata (`v 1.4.0 · 2026-10-14`) apre la fine
 Scarica `index.html` e aprilo in un browser; non richiede internet (i link esterni si aprono solo al clic).
 
 ## Cronologia / Changelog
+
+### 1.6.5 — 2026-10-22
+- fff-kit 1.1.2: PBKDF2 con 600.000 iterazioni, protezione anti-clickjacking
 
 ### 1.6.4 — 2026-10-22
 - Accessibilità: un solo H1 nella pagina (il titolo della home è un elemento di livello 2 annunciato come livello 1; l'aspetto è invariato).

@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.6.4 · **Utolsó frissítés:** 2026-10-22
+**Verzió:** 1.6.5 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -63,6 +63,9 @@ A megjelenített verzióra (`v 1.4.0 · 2026-10-14`) kattintva (vagy Entert nyom
 Töltsd le az `index.html` fájlt, és nyisd meg egy böngészőben; nincs szüksége internetre (a külső hivatkozások csak kattintásra nyílnak meg).
 
 ## Előzmények / Changelog
+
+### 1.6.5 — 2026-10-22
+- fff-kit 1.1.2: PBKDF2 600 000 iterációval, clickjacking elleni védelem
 
 ### 1.6.4 — 2026-10-22
 - Akadálymentesség: pontosan egy H1 az oldalon (a kezdőlap címe 2. szintű elem, 1. szintűként felolvasva; a megjelenés nem változik).

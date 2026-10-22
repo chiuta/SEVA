@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 1.6.4 · **Última atualização:** 2026-10-22
+**Versão:** 1.6.5 · **Última atualização:** 2026-10-22
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -63,6 +63,9 @@ Um clique (ou Enter) na versão apresentada (`v 1.4.0 · 2026-10-14`) abre a jan
 Descarregue `index.html` e abra-o num navegador; não requer internet (as ligações externas só se abrem ao clicar).
 
 ## Histórico / Changelog
+
+### 1.6.5 — 2026-10-22
+- fff-kit 1.1.2: PBKDF2 com 600.000 iterações, proteção anti-clickjacking
 
 ### 1.6.4 — 2026-10-22
 - Acessibilidade: um único H1 na página (o título da página inicial é um elemento de nível 2 anunciado como nível 1; o aspeto não muda).
