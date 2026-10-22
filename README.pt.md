@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 1.6.2 · **Última atualização:** 2026-10-22
+**Versão:** 1.6.3 · **Última atualização:** 2026-10-22
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -63,6 +63,9 @@ Um clique (ou Enter) na versão apresentada (`v 1.4.0 · 2026-10-14`) abre a jan
 Descarregue `index.html` e abra-o num navegador; não requer internet (as ligações externas só se abrem ao clicar).
 
 ## Histórico / Changelog
+
+### 1.6.3 — 2026-10-22
+- Correção de tradução: a descrição (e o nome) do painel de transparência seguem agora o idioma da interface.
 
 ### 1.6.2 — 2026-10-22
 - Correções de tradução: o título da página e as metaetiquetas seguem o idioma da interface; marcadores e etiquetas das áreas de texto traduzidos; removida uma palavra romena isolada.

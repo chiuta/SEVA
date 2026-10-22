@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.6.2 · **Last updated:** 2026-10-22
+**Version:** 1.6.3 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -63,6 +63,9 @@ A click (or Enter) on the displayed version (`v 1.4.0 · 2026-10-14`) opens the 
 Download `index.html` and open it in a browser; it needs no internet (external links open only on click).
 
 ## History / Changelog
+
+### 1.6.3 — 2026-10-22
+- Translation fix: the description (and name) in the transparency panel now follow the interface language.
 
 ### 1.6.2 — 2026-10-22
 - Translation fixes: page title and meta tags follow the interface language; placeholders and labels of text areas are translated; an isolated Romanian word removed.

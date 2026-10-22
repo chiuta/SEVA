@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.6.2 · **Ultimo aggiornamento:** 2026-10-22
+**Versione:** 1.6.3 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -63,6 +63,9 @@ Un clic (o Invio) sulla versione mostrata (`v 1.4.0 · 2026-10-14`) apre la fine
 Scarica `index.html` e aprilo in un browser; non richiede internet (i link esterni si aprono solo al clic).
 
 ## Cronologia / Changelog
+
+### 1.6.3 — 2026-10-22
+- Correzione di traduzione: la descrizione (e il nome) nel pannello di trasparenza seguono ora la lingua dell'interfaccia.
 
 ### 1.6.2 — 2026-10-22
 - Correzioni di traduzione: il titolo della pagina e i meta tag seguono la lingua dell’interfaccia; segnaposto ed etichette delle aree di testo tradotti; rimossa una parola rumena isolata.
