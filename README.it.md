@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.6.6 · **Ultimo aggiornamento:** 2026-10-22
+**Versione:** 1.6.7 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -63,6 +63,10 @@ Un clic (o Invio) sulla versione mostrata (`v 1.4.0 · 2026-10-14`) apre la fine
 Scarica `index.html` e aprilo in un browser; non richiede internet (i link esterni si aprono solo al clic).
 
 ## Cronologia / Changelog
+
+### 1.6.7 — 2026-10-22
+
+fff-kit 1.1.4: target touch e dimensione minima del testo; target touch e testo corretti.
 
 ### 1.6.6 — 2026-10-22
 - Accessibilità: il campo di ricerca mostra ora un anello di focus chiaro (contrasto di almeno 3:1) nei temi notte e giorno.
