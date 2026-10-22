@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.6.3 · **Dernière mise à jour :** 2026-10-22
+**Version :** 1.6.4 · **Dernière mise à jour :** 2026-10-22
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -63,6 +63,10 @@ Un clic (ou Entrée) sur la version affichée (`v 1.4.0 · 2026-10-14`) ouvre la
 Téléchargez `index.html` et ouvrez-le dans un navigateur ; il n'a pas besoin d'internet (les liens externes ne s'ouvrent qu'au clic).
 
 ## Historique / Changelog
+
+### 1.6.4 — 2026-10-22
+- Accessibilité : un seul H1 dans la page (le titre de l'accueil est un élément de niveau 2 annoncé comme niveau 1 ; l'apparence est inchangée).
+- Mobile : tout le texte passe à 12 px minimum ; les liens du pied de page et des sources ont une zone tactile plus grande.
 
 ### 1.6.3 — 2026-10-22
 - Correctif de traduction : la description (et le nom) du panneau de transparence suivent désormais la langue de l'interface.

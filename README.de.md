@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.6.3 · **Zuletzt aktualisiert:** 2026-10-22
+**Version:** 1.6.4 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -63,6 +63,10 @@ Ein Klick (oder die Eingabetaste) auf die angezeigte Version (`v 1.4.0 · 2026-1
 Lade `index.html` herunter und öffne sie in einem Browser; sie benötigt kein Internet (externe Links werden nur beim Anklicken geöffnet).
 
 ## Verlauf / Changelog
+
+### 1.6.4 — 2026-10-22
+- Barrierefreiheit: genau eine H1 auf der Seite (der Startseitentitel ist ein H2-Element, das als Ebene 1 angekündigt wird; das Aussehen bleibt gleich).
+- Mobil: Aller Text hat mindestens 12 px; Links in der Fußzeile und zu den Quellen haben eine größere Tippfläche.
 
 ### 1.6.3 — 2026-10-22
 - Übersetzungskorrektur: Beschreibung (und Name) im Transparenzfenster folgen jetzt der Oberflächensprache.

@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 1.6.3 · **Última actualización:** 2026-10-22
+**Versión:** 1.6.4 · **Última actualización:** 2026-10-22
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -63,6 +63,10 @@ Un clic (o Intro) sobre la versión mostrada (`v 1.4.0 · 2026-10-14`) abre la v
 Descarga `index.html` y ábrelo en un navegador; no requiere internet (los enlaces externos se abren solo al hacer clic).
 
 ## Historial / Changelog
+
+### 1.6.4 — 2026-10-22
+- Accesibilidad: un solo H1 en la página (el título de inicio es un elemento de nivel 2 anunciado como nivel 1; el aspecto no cambia).
+- Móvil: todo el texto pasa a un mínimo de 12 px; los enlaces del pie y de las fuentes tienen un área táctil mayor.
 
 ### 1.6.3 — 2026-10-22
 - Corrección de traducción: la descripción (y el nombre) del panel de transparencia siguen ahora el idioma de la interfaz.
