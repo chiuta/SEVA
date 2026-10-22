@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.6.1 · **Ultima actualizare:** 2026-10-19
+**Versiune:** 1.6.2 · **Ultima actualizare:** 2026-10-22
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -63,6 +63,9 @@ Un clic (sau Enter) pe versiunea afișată (`v 1.4.0 · 2026-10-14`) deschide fe
 Descarcă `index.html` și deschide-l în browser; nu necesită internet (link-urile externe se deschid doar la click).
 
 ## Istoric / Changelog
+
+### 1.6.2 — 2026-10-22
+- Corecturi de traducere: titlul paginii și meta-etichetele urmează limba interfeței; substituenții și etichetele câmpurilor de text sunt traduse; un cuvânt românesc izolat eliminat.
 
 ### 2026-10-19 (v1.6.1)
 - Toate textele lungi, glosarul și banca de quiz sunt traduse în en, fr, it, es, pt, de, hu (683 de rânduri noi în dicționar); fraza „textele lungi rămân în română” a fost eliminată. Conținutul de sănătate necesită revizie de specialitate.

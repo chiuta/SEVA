@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.6.1 · **Zuletzt aktualisiert:** 2026-10-19
+**Version:** 1.6.2 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -63,6 +63,9 @@ Ein Klick (oder die Eingabetaste) auf die angezeigte Version (`v 1.4.0 · 2026-1
 Lade `index.html` herunter und öffne sie in einem Browser; sie benötigt kein Internet (externe Links werden nur beim Anklicken geöffnet).
 
 ## Verlauf / Changelog
+
+### 1.6.2 — 2026-10-22
+- Übersetzungskorrekturen: Seitentitel und Meta-Tags folgen der Oberflächensprache; Platzhalter und Beschriftungen der Textfelder übersetzt; ein einzelnes rumänisches Wort entfernt.
 
 ### 2026-10-19 (v1.6.1)
 - Alle langen Texte, das Glossar und die Quizdatenbank sind nach en, fr, it, es, pt, de, hu übersetzt (683 neue Wörterbuchzeilen); der Satz „die langen Texte bleiben auf Rumänisch“ wurde entfernt. Die Gesundheitsinhalte müssen fachlich geprüft werden.

@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.6.1 · **Utolsó frissítés:** 2026-10-19
+**Verzió:** 1.6.2 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -63,6 +63,9 @@ A megjelenített verzióra (`v 1.4.0 · 2026-10-14`) kattintva (vagy Entert nyom
 Töltsd le az `index.html` fájlt, és nyisd meg egy böngészőben; nincs szüksége internetre (a külső hivatkozások csak kattintásra nyílnak meg).
 
 ## Előzmények / Changelog
+
+### 1.6.2 — 2026-10-22
+- Fordítási javítások: az oldalcím és a meta címkék követik a felület nyelvét; a szövegmezők helyőrzői és címkéi lefordítva; egy különálló román szó eltávolítva.
 
 ### 2026-10-19 (v1.6.1)
 - Az összes hosszú szöveg, a szójegyzék és a kvízbank le van fordítva en, fr, it, es, pt, de, hu nyelvre (683 új szótársor); eltávolítottuk azt a mondatot, hogy „a hosszú szövegek románul maradnak”. Az egészségügyi tartalom szakmai felülvizsgálatot igényel.

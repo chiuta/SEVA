@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.6.1 · **Dernière mise à jour :** 2026-10-19
+**Version :** 1.6.2 · **Dernière mise à jour :** 2026-10-22
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -63,6 +63,9 @@ Un clic (ou Entrée) sur la version affichée (`v 1.4.0 · 2026-10-14`) ouvre la
 Téléchargez `index.html` et ouvrez-le dans un navigateur ; il n'a pas besoin d'internet (les liens externes ne s'ouvrent qu'au clic).
 
 ## Historique / Changelog
+
+### 1.6.2 — 2026-10-22
+- Corrections de traduction : le titre de la page et les balises meta suivent la langue de l’interface ; textes indicatifs et libellés des zones de texte traduits ; un mot roumain isolé supprimé.
 
 ### 2026-10-19 (v1.6.1)
 - Tous les textes longs, le glossaire et la banque de quiz sont traduits en en, fr, it, es, pt, de, hu (683 nouvelles lignes de dictionnaire) ; la phrase « les textes longs restent en roumain » a été supprimée. Le contenu de santé doit être relu par un spécialiste.

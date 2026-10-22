@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 1.6.1 · **Última atualização:** 2026-10-19
+**Versão:** 1.6.2 · **Última atualização:** 2026-10-22
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -63,6 +63,9 @@ Um clique (ou Enter) na versão apresentada (`v 1.4.0 · 2026-10-14`) abre a jan
 Descarregue `index.html` e abra-o num navegador; não requer internet (as ligações externas só se abrem ao clicar).
 
 ## Histórico / Changelog
+
+### 1.6.2 — 2026-10-22
+- Correções de tradução: o título da página e as metaetiquetas seguem o idioma da interface; marcadores e etiquetas das áreas de texto traduzidos; removida uma palavra romena isolada.
 
 ### 2026-10-19 (v1.6.1)
 - Todos os textos longos, o glossário e o banco do questionário estão traduzidos para en, fr, it, es, pt, de, hu (683 linhas novas de dicionário); a frase «os textos longos permanecem em romeno» foi removida. O conteúdo de saúde precisa de revisão especializada.
