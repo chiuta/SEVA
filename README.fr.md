@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.6.8 · **Dernière mise à jour :** 2026-10-23
+**Version :** 1.6.9 · **Dernière mise à jour :** 2026-10-23
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -63,6 +63,10 @@ Un clic (ou Entrée) sur la version affichée (`v 1.4.0 · 2026-10-14`) ouvre la
 Téléchargez `index.html` et ouvrez-le dans un navigateur ; il n'a pas besoin d'internet (les liens externes ne s'ouvrent qu'au clic).
 
 ## Historique / Changelog
+
+### 1.6.9 — 2026-10-23
+
+- Cibles tactiles d’au moins 44 px sur les appareils tactiles (`pointer:coarse`) ; le bureau reste inchangé.
 
 ### 1.6.7 — 2026-10-22
 
