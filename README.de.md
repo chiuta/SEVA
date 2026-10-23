@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.6.8 · **Zuletzt aktualisiert:** 2026-10-23
+**Version:** 1.6.9 · **Zuletzt aktualisiert:** 2026-10-23
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -63,6 +63,10 @@ Ein Klick (oder die Eingabetaste) auf die angezeigte Version (`v 1.4.0 · 2026-1
 Lade `index.html` herunter und öffne sie in einem Browser; sie benötigt kein Internet (externe Links werden nur beim Anklicken geöffnet).
 
 ## Verlauf / Changelog
+
+### 1.6.9 — 2026-10-23
+
+- Touch-Ziele von mindestens 44 px auf Touch-Geräten (`pointer:coarse`); der Desktop bleibt unverändert.
 
 ### 1.6.7 — 2026-10-22
 

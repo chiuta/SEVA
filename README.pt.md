@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 1.6.8 · **Última atualização:** 2026-10-23
+**Versão:** 1.6.9 · **Última atualização:** 2026-10-23
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -63,6 +63,10 @@ Um clique (ou Enter) na versão apresentada (`v 1.4.0 · 2026-10-14`) abre a jan
 Descarregue `index.html` e abra-o num navegador; não requer internet (as ligações externas só se abrem ao clicar).
 
 ## Histórico / Changelog
+
+### 1.6.9 — 2026-10-23
+
+- Alvos de toque de pelo menos 44 px em dispositivos táteis (`pointer:coarse`); o computador não muda.
 
 ### 1.6.7 — 2026-10-22
 
