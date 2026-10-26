@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.6.10 · **Last updated:** 2026-10-26
+**Version:** 2.0.0 · **Last updated:** 2026-10-26
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -35,6 +35,10 @@ The content is organized in numbered sections (side menu, ☰ on mobile):
 - "🔊 Listen to the current section" (sidebar): reads the open section aloud through the browser's speech synthesis (`speechSynthesis`, language `ro-RO`; quality depends on the voices installed in the system; the button is hidden if the browser does not provide it); it stops on a second press or when the section changes. No network requests from the app.
 - The journal, personal notes, spaced-repetition progress and the certificate can be exported/imported as JSON files.
 
+## Sleep and rhythm journal (v2.0.0)
+
+In §11 the journal gains bedtime, wake-up time and daytime energy (1–5). From entries with times, SEVA computes locally the average duration, bedtime regularity, the weekend vs. rest-of-week shift and (with 6+ entries) energy after longer vs. shorter nights, then points to the matching guide sections. These are descriptive patterns from your own data with rough thresholds: not a diagnosis. Data stays in memory only (like the whole journal) and is exported/imported as `seva-jurnal.json`.
+
 ## New features (v1.4.0, 14 October 2026)
 
 No new learning features in this version: **spaced repetition already exists** (§17 Knowledge quiz, "Mode: Spaced repetition", simplified SM-2, with progress export/import) and was not duplicated. The only addition is the kit below.
@@ -63,6 +67,10 @@ A click (or Enter) on the displayed version (`v 1.4.0 · 2026-10-14`) opens the 
 Download `index.html` and open it in a browser; it needs no internet (external links open only on click).
 
 ## History / Changelog
+
+### 2.0.0 — 2026-10-26
+
+- Sleep and rhythm journal: bedtime, wake-up, energy; local patterns and links to the guide; tests in `tests/sleep.test.mjs`.
 
 ### 1.6.9 — 2026-10-23
 

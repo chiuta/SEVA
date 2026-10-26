@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.6.10 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 2.0.0 · **Ultima actualizare:** 2026-10-26
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -35,6 +35,10 @@ Conținutul este organizat în secțiuni numerotate (meniu lateral, ☰ pe mobil
 - „🔊 Ascultă secțiunea curentă” (bara laterală): citește cu voce tare secțiunea deschisă prin sinteza vocală a browserului (`speechSynthesis`, limba `ro-RO`; calitatea depinde de vocile instalate în sistem; butonul se ascunde dacă browserul nu o oferă); se oprește la a doua apăsare sau la schimbarea secțiunii. Fără cereri de rețea din partea aplicației.
 - Jurnalul, notițele personale, progresul de repetiție spațiată și certificatul se pot exporta/importa ca fișiere JSON.
 
+## Jurnal de somn și ritm (v2.0.0)
+
+În §11, jurnalul primește ora de culcare, ora de trezire și energia peste zi (1–5). Din intrările cu ore, SEVA calculează local durata medie, regularitatea orei de culcare, diferența dintre weekend și restul săptămânii și (la 6+ intrări) energia după nopți mai lungi vs. mai scurte, apoi trimite spre secțiunile potrivite din ghid. Sunt tipare descriptive din datele tale, cu praguri orientative: nu sunt diagnostic. Datele rămân doar în memorie (ca tot jurnalul) și se exportă/importă în `seva-jurnal.json`.
+
 ## Funcții noi (v1.4.0, 14 octombrie 2026)
 
 Fără funcții de învățare noi în această versiune: **repetiția spațiată există deja** (§17 Test de cunoștințe, „Mod: Repetiție spațiată”, SM-2 simplificat, cu export/import al progresului) și nu a fost dublată. Singura adăugire este kitul de mai jos.
@@ -63,6 +67,10 @@ Un clic (sau Enter) pe versiunea afișată (`v 1.4.0 · 2026-10-14`) deschide fe
 Descarcă `index.html` și deschide-l în browser; nu necesită internet (link-urile externe se deschid doar la click).
 
 ## Istoric / Changelog
+
+### 2.0.0 — 2026-10-26
+
+- Jurnal de somn și ritm: culcare, trezire, energie; tipare locale și legături spre ghid; teste în `tests/sleep.test.mjs`.
 
 ### 1.6.9 — 2026-10-23
 
