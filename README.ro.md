@@ -2,7 +2,9 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.0.0 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 2.0.1 · **Ultima actualizare:** 2026-10-27
+
+**Stare:** experimental (conținut de sănătate nerevizuit de un specialist) · **Offline:** complet (fără cereri de rețea; sursele sunt linkuri deschise la click)
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -66,7 +68,19 @@ Un clic (sau Enter) pe versiunea afișată (`v 1.4.0 · 2026-10-14`) deschide fe
 
 Descarcă `index.html` și deschide-l în browser; nu necesită internet (link-urile externe se deschid doar la click).
 
+## Surse pe secțiuni și data revizuirii (2.0.1, 2026-10-27)
+
+- Fiecare dintre cele 20 de secțiuni are acum, la final, un bloc **„Surse și revizuire”** (în 8 limbi). Sursele sunt doar cele **verificate pe web la 2026-10-27**: OMS (Constituția OMS; fișa „Healthy diet”; ghidurile OMS privind activitatea fizică și sedentarismul; „Doing What Matters in Times of Stress”), AASM/SRS (Watson și colab., 2015, durata somnului la adult), Premiul Nobel 2017 (ritm circadian), Selye (1936, *Nature*), Kabat-Zinn (1982) și Lally și colab. (2010, formarea obiceiurilor). Sursele sunt **de context general și nu acoperă fiecare afirmație** din secțiune.
+- Secțiunile fără o sursă verificată (respirație, recuperare, postură, o zi echilibrată, trusa de wellness, calculatoare, provocări, test, glosar) afișează explicit **„Surse: de completat”**; tabloul de bord este marcat ca derivat din datele tale. **Nu au fost inventate surse.**
+- **Data:** „Ultima actualizare a listei de surse: 2026-10-27” datează **doar adăugarea acestor liste**. **Nu există o revizuire a conținutului de către un specialist** și aplicația spune asta în fiecare bloc.
+- **De verificat (semnalat în aplicație):** secțiunea Somn dă „7–9 ore”, dar sursa citată (Watson și colab., 2015) recomandă „7 ore sau mai mult”. Numerele și programele din „Când ai nevoie de ajutor” nu au fost reverificate la această actualizare.
+- Textul conținutului medical nu a fost modificat. Sursele sunt linkuri deschise doar la click; aplicația rămâne fără cereri de rețea.
+
 ## Istoric / Changelog
+
+### 2.0.1 — 2026-10-27 (anterior: 2.0.0)
+
+Bloc „Surse și revizuire” în fiecare secțiune (doar surse verificate; altfel „de completat”); conținutul neschimbat.
 
 ### 2.0.0 — 2026-10-26
 

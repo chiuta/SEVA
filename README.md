@@ -2,7 +2,9 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.0.0 · **Last updated:** 2026-10-26
+**Version:** 2.0.1 · **Last updated:** 2026-10-27
+
+**Status:** experimental (health content not reviewed by a specialist) · **Offline:** complete (no network requests; sources are links opened on click)
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -66,7 +68,19 @@ A click (or Enter) on the displayed version (`v 1.4.0 · 2026-10-14`) opens the 
 
 Download `index.html` and open it in a browser; it needs no internet (external links open only on click).
 
+## Sources per section and review date (2.0.1, 2026-10-27)
+
+- Each of the 20 sections now ends with a **"Sources and review"** block (8 languages). The sources are only those **verified on the web on 2026-10-27**: WHO (WHO Constitution; "Healthy diet" fact sheet; WHO guidelines on physical activity and sedentary behaviour; "Doing What Matters in Times of Stress"), AASM/SRS (Watson et al., 2015, adult sleep duration), the 2017 Nobel Prize (circadian rhythm), Selye (1936, *Nature*), Kabat-Zinn (1982) and Lally et al. (2010, habit formation). The sources give **general context and do not cover every statement** in the section.
+- Sections without a verified source (breathing, recovery, posture, a balanced day, the wellness kit, calculators, challenges, quiz, glossary) show an explicit **"Sources: to be completed"**; the dashboard is marked as derived from your own data. **No sources were invented.**
+- **Date:** "Last update of the source list: 2026-10-27" dates **only the addition of these lists**. **There is no content review by a specialist**, and the app says so in every block.
+- **To verify (flagged in the app):** the Sleep section gives "7–9 hours", but the cited source (Watson et al., 2015) recommends "7 hours or more". The numbers and schedules in "When you need help" were not re-checked in this update.
+- The text of the health content was not modified. The sources are links opened only on click; the app still makes no network requests.
+
 ## History / Changelog
+
+### 2.0.1 — 2026-10-27 (previous: 2.0.0)
+
+"Sources and review" block in every section (verified sources only; otherwise "to be completed"); content unchanged.
 
 ### 2.0.0 — 2026-10-26
 
