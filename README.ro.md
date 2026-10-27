@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.0.1 · **Ultima actualizare:** 2026-10-27
+**Versiune:** 2.1.0 · **Ultima actualizare:** 2026-10-27
 
 **Stare:** experimental (conținut de sănătate nerevizuit de un specialist) · **Offline:** complet (fără cereri de rețea; sursele sunt linkuri deschise la click)
 
@@ -76,7 +76,18 @@ Descarcă `index.html` și deschide-l în browser; nu necesită internet (link-u
 - **De verificat (semnalat în aplicație):** secțiunea Somn dă „7–9 ore”, dar sursa citată (Watson și colab., 2015) recomandă „7 ore sau mai mult”. Numerele și programele din „Când ai nevoie de ajutor” nu au fost reverificate la această actualizare.
 - Textul conținutului medical nu a fost modificat. Sursele sunt linkuri deschise doar la click; aplicația rămâne fără cereri de rețea.
 
+## Surse completate pentru patru secțiuni (2.1.0, 2026-10-27)
+
+- **Respirația:** NHS, „Breathing exercises for stress” (nhs.uk; ultima revizuire după pagină: 12 iunie 2026). **Recuperarea:** NHS inform (Scoția), „Pain and injuries after exercise” (pagina indică ultima actualizare: 29 aprilie 2024). **Postura** și **O zi echilibrată:** Bull F.C. et al. (2020), ghidurile OMS 2020 privind activitatea fizică și sedentarismul, *Br J Sports Med* 54(24):1451–1462 (doi:10.1136/bjsports-2020-102955), și pagina American Academy of Ophthalmology „Eye Strain and Sleepy Eyes: How to Prevent Eye Discomfort” (publicată 5 mai 2023; regula 20-20-20). Toate au fost deschise pe web la 2026-10-27.
+- Fiecare bloc spune **ce nu acoperă sursa**, tradus în 8 limbi (fr/it/es/pt/de/hu: traducere automată). Exemple: sursa de respirație descrie doar respirația lentă abdominală (nu tiparele din instrument, nervul vag, CO2 sau HRV); sursa de recuperare spune că durerea încetează de obicei în 2–5 zile și sugerează să aștepți câteva zile, ceea ce **nu confirmă** afirmația secțiunii „mișcarea ușoară ajută mai mult decât repausul complet” (marcat „de verificat”); sursa OMS recomandă reducerea sedentarismului dar spune că dovezile nu permit un prag, deci pauzele „la 30–60 de minute” nu au sursă.
+- **Rămân „Surse: de completat”:** trusa de wellness, calculatoare, provocări, quiz, glosar (nu s-a găsit o sursă autoritară potrivită conținutului). **Nicio revizuire a conținutului de către un specialist** — în continuare „neefectuată” în fiecare bloc. Conținutul textului de sănătate nu a fost modificat.
+- Teste: `tests/sources.test.mjs` (68 de verificări: doar URL-uri din lista verificată, marcaje traduse în 8 limbi, secțiunile rămase încă marcate).
+
 ## Istoric / Changelog
+
+### 2.1.0 — 2026-10-27 (anterior: 2.0.1)
+
+Surse adăugate pentru respirație, recuperare, postură și o zi echilibrată (NHS, NHS inform, OMS 2020, AAO) cu marcaje explicite de acoperire; cinci secțiuni rămân „de completat”; conținut nemodificat.
 
 ### 2.0.1 — 2026-10-27 (anterior: 2.0.0)
 

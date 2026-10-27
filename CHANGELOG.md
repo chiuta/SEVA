@@ -1,5 +1,14 @@
 # Jurnal de modificări — SEVA
 
+## 2.1.0 — 2026-10-27 (anterior: 2.0.1)
+
+Doar surse; conținutul de sănătate nu a fost modificat.
+
+- Surse verificate pe web la 2026-10-27 pentru: Respirație (NHS), Recuperare (NHS inform), Postură și O zi echilibrată (OMS 2020, Bull et al., BJSM; AAO pentru regula 20-20-20). Fiecare bloc are marcaj despre ce NU acoperă sursa (8 limbi; fr/it/es/pt/de/hu: traducere automată) și „restul afirmațiilor: sursă de completat”.
+- Semnalat în aplicație: sursa de recuperare nu confirmă „mișcarea ușoară ajută mai mult decât repausul complet” (de verificat).
+- Test nou: `tests/sources.test.mjs` (68 de verificări).
+- Rămân „Surse: de completat”: trusa de wellness, calculatoare, provocări, quiz, glosar. Revizuire de specialist: neefectuată.
+
 ## 2.0.1 — 2026-10-27 (anterior: 2.0.0)
 
 Doar texte/structură; conținutul de sănătate nu a fost modificat.
