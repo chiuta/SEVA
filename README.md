@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.0.1 · **Last updated:** 2026-10-27
+**Version:** 2.1.0 · **Last updated:** 2026-10-27
 
 **Status:** experimental (health content not reviewed by a specialist) · **Offline:** complete (no network requests; sources are links opened on click)
 
@@ -76,7 +76,18 @@ Download `index.html` and open it in a browser; it needs no internet (external l
 - **To verify (flagged in the app):** the Sleep section gives "7–9 hours", but the cited source (Watson et al., 2015) recommends "7 hours or more". The numbers and schedules in "When you need help" were not re-checked in this update.
 - The text of the health content was not modified. The sources are links opened only on click; the app still makes no network requests.
 
+## Sources completed for four sections (2.1.0, 2026-10-27)
+
+- **Breathing:** NHS, "Breathing exercises for stress" (nhs.uk; page last reviewed 12 June 2026 according to the page). **Recovery:** NHS inform (Scotland), "Pain and injuries after exercise" (page last updated 29 April 2024). **Posture** and **A balanced day:** Bull F.C. et al. (2020), WHO 2020 guidelines on physical activity and sedentary behaviour, *Br J Sports Med* 54(24):1451–1462 (doi:10.1136/bjsports-2020-102955), and the American Academy of Ophthalmology page "Eye Strain and Sleepy Eyes: How to Prevent Eye Discomfort" (published 5 May 2023; the 20-20-20 rule). All were opened on the web on 2026-10-27.
+- Each block states **what the source does not cover**, translated into 8 languages (fr/it/es/pt/de/hu: machine translation). Examples: the breathing source only describes slow belly breathing (not the patterns in the tool, the vagus nerve, CO2 or HRV); the recovery source says soreness usually stops within 2–5 days and suggests waiting a few days, which **does not confirm** the section's "light movement helps more than complete rest" (flagged "to be verified"); the WHO source recommends reducing sedentary time but says the evidence was insufficient to set a threshold, so the "every 30–60 minutes" breaks are not sourced.
+- **Still "Sources: to be completed":** wellness kit, calculators, challenges, quiz, glossary (no authoritative source found that matches their content). **No content review by a specialist** — still "not done" in every block. The content of the health text was not modified.
+- Tests: `tests/sources.test.mjs` (68 checks: only URLs from the verified list, flags translated in 8 languages, remaining sections still marked).
+
 ## History / Changelog
+
+### 2.1.0 — 2026-10-27 (previous: 2.0.1)
+
+Sources added for breathing, recovery, posture and a balanced day (NHS, NHS inform, WHO 2020, AAO) with explicit coverage flags; five sections remain "to be completed"; content unchanged.
 
 ### 2.0.1 — 2026-10-27 (previous: 2.0.0)
 
