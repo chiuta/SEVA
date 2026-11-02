@@ -22,7 +22,7 @@ const SECS = ["sec-acasa", "sec-istorie", "sec-circadian", "sec-somn", "sec-resp
 for (const id of SECS) ok(h.includes('data-src="' + id + '"'), "bloc de surse în " + id);
 const srcAnchors = [...h.matchAll(/data-src="sec-[a-z]+">[\s\S]*?<div class="src-date">/g)].flatMap(m => [...m[0].matchAll(/<a href="([^"]+)"/g)].map(x => x[1]));
 for (const u of srcAnchors) ok(VERIFIED.has(u), "URL de sursă în lista verificată: " + u);
-// secțiunile completate în 2.1.0
+// secțiunile completate în 2.2.0
 const WITH = {"sec-respiratie": ["nhs.uk/mental-health"], "sec-recuperare": ["nhsinform.scot"], "sec-postura": ["doi.org/10.1136/bjsports-2020-102955", "aao.org/eye-health"], "sec-structura": ["doi.org/10.1136/bjsports-2020-102955", "aao.org/eye-health"]};
 for (const [id, needles] of Object.entries(WITH)) { const b = box(id); for (const n of needles) ok(b.includes(n), id + " conține " + n); ok(!/Surse: de completat/.test(b), id + " nu mai spune „de completat” în antet"); ok(/src-flag/.test(b) && /src-rest/.test(b), id + " are marcaj de acoperire și «restul: de completat»"); }
 // secțiunile fără sursă verificată rămân marcate
