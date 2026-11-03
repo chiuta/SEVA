@@ -2,7 +2,7 @@
   "schema": 1,
   "slug": "seva",
   "name": "SEVA — Enciclopedia stării de bine",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "updated": "2026-11-03",
   "description": "Ghid complet, off-line, despre starea de bine: ritm circadian, somn, respirație, nutriție, mișcare, minte, obiceiuri și resurse — un singur fișier, fără cont, fără urmărire.",
   "egress": [],
@@ -18,8 +18,8 @@
     "BroadcastChannel"
   ],
   "storageKeys": [],
-  "sizeBytes": 1391279,
-  "sha256": "cb9974427917a55125f15808a0af8cb503af17a70231a6cc355bfc10e284fd50",
+  "sizeBytes": 1391408,
+  "sha256": "f936319701e2f6b52c941fc525f380694ae47cf34bbb8b42e9ac857bf900b4a3",
   "csp": {
     "present": true,
     "directives": {
