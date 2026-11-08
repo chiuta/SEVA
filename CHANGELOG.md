@@ -1,5 +1,8 @@
 # Jurnal de modificări — SEVA
 
+## 2.2.5 — 2026-11-08
+În fiecare casetă «Surse și revizuire» (20) s-a adăugat linia «Informații cu caracter general; nu înlocuiesc evaluarea medicală individuală.», tradusă în 8 limbi (rând nou în pachetul i18n).
+
 ## 2.2.2 — 2026-11-03
 
 Destinații «Trimite către…» pentru pașaportul de învățare: adăugate FENARIUM și MENSURA (registrul de aplicații-țintă reinjectat din hub).
